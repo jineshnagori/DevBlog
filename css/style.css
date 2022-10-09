@@ -19,14 +19,16 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-bg-color);
-  background-image: -webkit-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.2) 50%,
-      rgba(255, 255, 255, 0.2) 75%,
-      transparent 75%,
-      transparent);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
 }
 
 .center {
@@ -93,15 +95,21 @@
   font-family: var(--font1);
 }
 
+.contact-content {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 18px;
+}
+
 .form-box input,
 textarea {
   width: 52vw;
-  padding: 0px 6px;
+  padding: 5px 6px;
   margin: 7px 0;
   font-size: 18px;
   font-family: var(--font1);
-  border: 2px solid var(--main-bg-color);
+  border: none;
   border-radius: 5px;
+  background-color: #e7e7e7;
 }
 
 * {
@@ -421,7 +429,7 @@ textarea {
   }
 }
 
-.footer-dark .item.social>a {
+.footer-dark .item.social > a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -435,7 +443,7 @@ textarea {
   opacity: 0.75;
 }
 
-.footer-dark .item.social>a:hover {
+.footer-dark .item.social > a:hover {
   opacity: 0.9;
 }
 
