@@ -19,14 +19,16 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-bg-color);
-  background-image: -webkit-linear-gradient(45deg,
-      rgba(255, 255, 255, 0.2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.2) 50%,
-      rgba(255, 255, 255, 0.2) 75%,
-      transparent 75%,
-      transparent);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
 }
 
 .center {
@@ -42,7 +44,7 @@
 }
 
 .max-width-1 {
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .max-width-2 {
@@ -153,21 +155,36 @@ textarea {
 }
 
 .content {
-  height: 100%;
   display: flex;
-  margin-top: 32px;
+  justify-content: space-between;
+  margin-top: 40px !important;
+  padding-top: 30px;
   padding: 9px;
   position: relative;
 }
 
 .content::after {
   content: "";
-  background-image: url("../img/11.svg");
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   width: 100%;
   height: inherit;
   opacity: 0.15;
-  border-radius: 12px;
+}
+
+.content::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* background-image: url(../img/leaves.png); */
+  /* background-image: url(../img/bg.png); */
+  background-image: url(../img/bg.jpg);
+  opacity: 0.15;
 }
 
 .content-left {
@@ -179,6 +196,14 @@ textarea {
   z-index: 1;
 }
 
+.content-left h1 {
+  font-size: 5rem;
+  line-height: 4.5rem;
+  font-family: var(--font1);
+  font-weight: 500;
+  padding-bottom: 2rem;
+}
+
 .content-right {
   display: flex;
   align-items: center;
@@ -186,9 +211,13 @@ textarea {
 }
 
 .content-right img {
-  height: 355px;
-  border: 2px solid black;
-  border-radius: 200px;
+  height: 600px;
+  width: 600px;
+  z-index: 10;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 25px;
+  border-radius: 50%;
 }
 
 .home-articles {
@@ -245,7 +274,7 @@ textarea {
   color: white;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1214px) {
   .navigation {
     flex-direction: column;
     margin-bottom: 23px;
@@ -258,6 +287,14 @@ textarea {
 
   .content-right {
     display: none;
+  }
+
+  .content-left h1 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    font-family: var(--font1);
+    font-weight: 400;
+    padding-bottom: 2rem;
   }
 
   .home-article {
@@ -421,7 +458,7 @@ textarea {
   }
 }
 
-.footer-dark .item.social>a {
+.footer-dark .item.social > a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -435,7 +472,7 @@ textarea {
   opacity: 0.75;
 }
 
-.footer-dark .item.social>a:hover {
+.footer-dark .item.social > a:hover {
   opacity: 0.9;
 }
 
