@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
     <link rel="stylesheet" href="css/style.css">
-    <title>iBlog - Heaven for bloggers</title>
+    <title>DevBlog - Blog for Developers</title>
 </head>
 
 <body>
@@ -59,31 +59,27 @@
     </nav>
 
 
-    <div class="max-width-1 m-auto">
-        <hr>
-    </div>
+    <div class="wrapper">
+        <form class="form-signin">
+          <h2 class="form-signin-heading">Login</h2>
+      
+          <div class="inner-addon left-addon">
+            <label class="control-label">Site name</label>
+              <i class="icon ion-android-globe"></i>
+              <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
+          </div>
+          <div class="inner-addon left-addon">
+             <label class="control-label">Sitebuilder password</label>
+              <i class="icon ion-android-lock"></i>
+              <input type="password" class="form-control" name="password" placeholder="*******" required="" autofocus=""/>
+          </div>
+           <a class="forgot-password" href="#">I forgot my password</a>   
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in!</button>
+        </form>
+        <p class="account-signup">Don't have an account? <a href="signup.html">Register here</a>
+      </div>
+      
 
-            <h2>Feel Free to Contact Us</h2>
-            <div class="contact-form">
-                <div class="form-box">
-                    <input type="text" placeholder="Enter Your Name">
-                </div>
-                <div class="form-box">
-                    <input type="number" placeholder="Enter Your Phone Number">
-                </div>
-                <div class="form-box">
-                    <input type="email" placeholder="Enter Your Email Id">
-                </div>
-                <div class="form-box">
-                    <textarea name="" id="" cols="30" rows="6" placeholder="How may we help you?"></textarea>
-                </div>
-                <div class="form-box">
-                    <button class="btn">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="space"></div>
     <!-- footer -->
     <div class="footer-dark">
         <footer>
@@ -121,5 +117,7 @@
         </footer>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>
