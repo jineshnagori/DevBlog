@@ -31,6 +31,10 @@
   margin: auto;
 }
 
+.mt-8 {
+  margin-top: 40px;
+}
+
 .mx-1 {
   margin-left: 23px;
   margin-right: 23px;
@@ -388,6 +392,12 @@ textarea {
   .footer-dark .item.social {
     text-align:center;
     margin-top:20px;
+  }
+}
+
+@media screen and (min-width:991px) {
+  .navbar-collapse {
+    justify-content: inherit;
   }
 }
 
