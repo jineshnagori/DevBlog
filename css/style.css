@@ -1,18 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap");
-:root { 
+
+:root {
   --main-bg-color: #bd6418;
   --font1: "Baloo Bhaina 2", cursive;
   --font2: "Roboto", sans-serif;
 }
 
-.center{
+.center {
   text-align: center
 }
 
 .font1 {
   font-family: var(--font1);
 }
+
 .font2 {
   font-family: var(--font2);
 }
@@ -29,12 +31,12 @@
   margin: auto;
 }
 
-.mx-1{
+.mx-1 {
   margin-left: 23px;
   margin-right: 23px;
 }
 
-.my-2{
+.my-2 {
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -65,19 +67,20 @@
   font-family: var(--font1);
 }
 
-.form-box input, textarea{
+.form-box input,
+textarea {
   width: 52vw;
   padding: 0px 6px;
   margin: 7px 0;
   font-size: 18px;
   font-family: var(--font1);
   border: 2px solid var(--main-bg-color);
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 .navigation {
@@ -170,7 +173,7 @@
 }
 
 .year-box {
-  position: absolute;  
+  position: absolute;
   right: 0px;
   top: 100px;
   width: 234px;
@@ -200,6 +203,7 @@
   text-decoration: none;
   color: black;
 }
+
 /* .home-articles{} */
 .footer {
   height: 50px;
@@ -253,22 +257,28 @@
   .home-article img {
     width: 70vw;
   }
+
   .form-input {
     width: 50%;
   }
+
   .form-box input,
   textarea {
     width: 66vw;
   }
+
   .row {
     flex-direction: column;
   }
+
   .social {
     padding: 0;
   }
+
   .post-img {
     height: auto;
   }
+
   .adjust-year {
     position: static;
     height: auto;
@@ -277,4 +287,42 @@
     justify-content: flex-end;
     width: 100%;
   }
+}
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: 'Arvo', serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.contant_box_404 {
+  margin-top: -50px;
 }
