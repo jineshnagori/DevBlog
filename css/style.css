@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap");
-:root { 
+:root {
   --main-bg-color: #bd6418;
   --font1: "Baloo Bhaina 2", cursive;
   --font2: "Roboto", sans-serif;
 }
 
-.center{
-  text-align: center
+.center {
+  text-align: center;
 }
 
 .font1 {
@@ -29,12 +29,12 @@
   margin: auto;
 }
 
-.mx-1{
+.mx-1 {
   margin-left: 23px;
   margin-right: 23px;
 }
 
-.my-2{
+.my-2 {
   margin-top: 32px;
   margin-bottom: 32px;
 }
@@ -65,62 +65,128 @@
   font-family: var(--font1);
 }
 
-.form-box input, textarea{
+.form-box input,
+textarea {
   width: 52vw;
   padding: 0px 6px;
   margin: 7px 0;
   font-size: 18px;
   font-family: var(--font1);
   border: 2px solid var(--main-bg-color);
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  box-sizing: border-box;
 }
-
 .navigation {
-  margin-top: 25px;
   font-family: var(--font1);
   /* height: 74px;  */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* border: 2px solid red; */
+  padding: 1.5% 3%;
 }
 
-.nav-left {
+.logo {
+  /* border: 2px solid black; */
+  /* padding: 2px 10px; */
+  padding: 0;
+  width: 15%;
+}
+.logo a {
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-decoration: none;
+  /* border: 4px solid green; */
+  padding: 10px 0;
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
 }
 
-.nav-left span {
-  font-size: 35px;
-  padding-top: 10px;
+.logo span {
+  padding: 0px 15px;
+  /* border: 2px solid red; */
+}
+.nav-links {
+  /* border: 2px solid black; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: right; */
+  text-align: right;
+  flex: 1;
+}
+.nav-links ul {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* margin-right: 20px; */
+  /* /* font-size: 1rem; */
+  padding: 30px 0;
+  /* border: 2px solid red; */
 }
 
-.nav-left ul {
-  display: flex;
-  align-items: center;
-  margin: 0 77px;
-  font-size: 22px;
-  padding-bottom: 23px;
-}
-
-.nav-left ul li {
+.nav-links ul li {
+  display: inline-block;
+  /* border: 2px solid black; */
   list-style: none;
-  margin: 0 14px;
+  /* margin: 0 14px; */
+  padding: 9px 23px;
   font-family: var(--font2);
   transition: all 0.3s ease-in-out;
 }
 
-.nav-left ul li a {
+.nav-links ul li a {
   text-decoration: none;
   color: black;
+  font-size: 1.2rem;
 }
 
-.nav-left ul li a:hover {
+.nav-links ul li a:hover {
   color: var(--main-bg-color);
   font-weight: bolder;
+  /* font-size: 1.2rem; */
+  transition: 0.5s;
+}
+
+.navigation .fa {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  /* .navigation {
+    display: block;
+  } */
+  .nav-links ul li {
+    display: block;
+    border-bottom: 1px solid #000;
+  }
+  .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: #ff0000;
+    top: 0;
+    right: -4440px;
+    z-index: 2;
+    text-align: left;
+    transition: 0.5s;
+  }
+  nav .fa {
+    display: block;
+    color: #000;
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+  .nav-links ul {
+    padding: 20px;
+  }
 }
 
 .content {
@@ -170,7 +236,7 @@
 }
 
 .year-box {
-  position: absolute;  
+  position: absolute;
   right: 0px;
   top: 100px;
   width: 234px;
