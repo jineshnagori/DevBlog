@@ -123,12 +123,12 @@ body {
   border-radius: 5px;
   background-color: #e7e7e7;
 }
-/*.form-box textarea {
+.form-box button {
   margin: 5px;
-  width: 52vw;
   border-radius: 5px;
   background-color: #e7e7e7;
-}*/
+}
+
 
 * {
   margin: 0;
