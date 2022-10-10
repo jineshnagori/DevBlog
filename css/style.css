@@ -512,3 +512,19 @@ body {
   font-size: 13px;
   margin-bottom: 0;
 }
+.contact{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contact input,textarea{
+  padding: 2px 10px;
+}
+.wrapper{
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom:100px;
+}
