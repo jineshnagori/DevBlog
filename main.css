@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@500&display=swap');
 :root {
   --neutral-100: #fff;
   --neutral-500: #b1b1b1;
   --black-100: #08080a;
   --black-500: #03111c;
   --pink-500: #dc3545;
-  --ubuntuMono: "Ubuntu Mono", monospace;
-  --ubuntu: "Ubuntu", sans-serif;
+  --ubuntuMono: 'Ubuntu Mono', monospace;
+  --ubuntu: 'Ubuntu', sans-serif;
 }
 
 *,
@@ -15,7 +15,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: black;
 }
 
 html {
@@ -25,12 +24,10 @@ html {
 body {
   font-family: var(--ubuntuMono);
   background-color: #fff !important;
-  
 }
 
 li {
   list-style: none;
-  padding: 5px;
   transition: 0.3s;
 }
 .navbar-links li:hover {
@@ -61,7 +58,7 @@ p {
   position: relative;
 }
 .logo h1::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   right: -0.5rem;
@@ -229,7 +226,7 @@ footer {
   margin-top: 0rem;
 }
 
-.footer-container {
+/* .footer-container {
   background-color: rgb(7, 7, 78);
   margin-inline: auto;
   padding-top: 10px;
@@ -262,7 +259,7 @@ footer {
 .copyright a {
   color: var(--pink-500);
   font-weight: 700;
-}
+} */
 
 @media (min-width: 610px) {
   .btn-register {
