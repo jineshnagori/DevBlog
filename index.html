@@ -15,7 +15,6 @@
     <link rel="icon" type="image/x-icon" href="./img/blog.png">
     <title>DevBlog - Blog for Developers</title>
     <link rel="stylesheet" href="css/style.css" id="theme-sheet">
-    <script src="darktheme.js"></script>
 </head>
 
 <body>
@@ -261,5 +260,18 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var themeBtn = document.querySelector("#themeBtn");
+    var themeSheet = document.querySelector("#theme-sheet");
+
+    function theme() {
+        console.log("background changed");
+        if(themeSheet.getAttribute("href") == "css/style.css") {
+            themeSheet.href = "css/darktheme.css";
+        } else {
+            themeSheet.href = "css/style.css";
+    }
+}
+</script>
 
 </html>
