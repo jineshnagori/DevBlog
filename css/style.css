@@ -30,7 +30,11 @@
     transparent
   );
 }
-
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .center {
   text-align: center;
 }
@@ -343,8 +347,10 @@ textarea {
     padding: 0;
   }
 
-  .post-img {
+  .post-img img {
+    width: 100vw;
     height: auto;
+    margin: 10px;
   }
 
   .adjust-year {
