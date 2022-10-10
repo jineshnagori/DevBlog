@@ -30,6 +30,17 @@
 		transparent
 	);
 }
+
+#themeBtn{
+  border: none;
+  background-color: transparent;
+  padding-left: 10px;
+}
+
+#themeBtn #moon{
+  display: none;
+}
+
 body {
 	margin: 0;
 	padding: 0;
