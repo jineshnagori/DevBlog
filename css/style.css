@@ -103,11 +103,7 @@
 .form-box input,
 textarea {
   width: 52vw;
-  padding: 5px 6px;
-  margin: 7px 0;
-  font-size: 18px;
-  font-family: var(--font1);
-  border: none;
+
   border-radius: 5px;
   background-color: #e7e7e7;
 }
@@ -159,7 +155,10 @@ textarea {
   color: var(--main-bg-color);
   font-weight: bolder;
 }
-
+.space {
+  width: 100%;
+  height: 5rem;
+}
 .content {
   display: flex;
   justify-content: space-between;
@@ -488,75 +487,4 @@ textarea {
   opacity: 0.3;
   font-size: 13px;
   margin-bottom: 0;
-}
-
-.wrapper {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.form-signin {
-  max-width: 380px;
-  padding: 15px 35px 45px;
-  margin: 0 auto;
-  background-color: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  border-left: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 3rem 5rem -2rem rgba(0, 0, 0, 0.2);
-}
-
-.form-control {
-  font-size: 16px;
-  padding: 10px;
-  box-sizing: border-box;
-  height: auto;
-  border-radius: 1px;
-}
-
-/* enable absolute positioning */
-.inner-addon {
-  position: relative;
-}
-
-/* style icon */
-.inner-addon .icon {
-  position: absolute;
-  top: 23px;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.05);
-  pointer-events: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* align icon */
-.left-addon .icon {
-  left: 0px;
-}
-
-/* add padding  */
-.left-addon input {
-  padding-left: 65px;
-}
-
-.form-signin input {
-  margin-bottom: 15px;
-  height: 44px;
-}
-
-.form-signin .forgot-password {
-  display: block;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-top: -8px;
-  margin-bottom: 30px;
-  font-size: 12px;
-}
-
-.account-signup {
-  max-width: 380px;
-  padding: 15px 35px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.1);
 }
