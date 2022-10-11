@@ -433,6 +433,44 @@ body {
 	margin-top: -50px;
 }
 
+.contact-heading{
+  margin-top: 10vh;
+  text-align: center;
+  
+}
+.contact-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3vmax;
+}
+
+.contact-form > div { 
+  margin: 1vmax;
+  padding: 0.3vmax;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contact-form img{
+  height: 1.5vmax;
+  width: 1.5vmax;
+  margin-left: 10px;
+}
+.contact-form input,
+.contact-form textarea{
+  padding: 0.5vmax;
+  border: none;
+  background: none;
+  outline: none;
+  
+}
+.contact-form .submit-form-box{
+ box-shadow: none;
+  
+}
+
+
 .footer-dark {
 	padding: 70px  ;
 	color: #f0f9ff;
