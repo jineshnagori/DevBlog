@@ -16,13 +16,13 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
-        <div class="container"> <a class="navbar-brand d-flex align-items-center" href="#">
+        <div class="container"> <a class="navbar-brand d-flex align-items-center" href="index.html">
 
                 <span class="ml-3 font-weight-bold">DevBlog</apan>
-            </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-                data-target="#navbar4">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right border-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+              </button>
 
             <div class="collapse navbar-collapse" id="navbar4">
                 <ul class="navbar-nav mr-auto pl-lg-4">
@@ -61,22 +61,24 @@
 
     <div class="wrapper">
         <form class="form-signin">
-          <h2 class="form-signin-heading">Login</h2>
+          <h2 class="form-signin-heading">Register</h2>
       
-          <div class="inner-addon left-addon">
+          <div class="inner-addon left-addon my-2">
             <label class="control-label">Site name</label>
               <i class="icon ion-android-globe"></i>
               <input type="text" class="form-control" name="site" placeholder="yourdomain.com" required="" autofocus=""/>
           </div>
-          <div class="inner-addon left-addon">
+          <div class="inner-addon left-addon my-2">
              <label class="control-label">Sitebuilder password</label>
               <i class="icon ion-android-lock"></i>
               <input type="password" class="form-control" name="password" placeholder="*******" required="" autofocus=""/>
           </div>
-           <a class="forgot-password" href="#">I forgot my password</a>   
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in!</button>
+           <a class="forgot-password" href="#">I forgot my password</a> 
+           <br>  
+          <button class="btn btn-lg btn-primary btn-block my-2" type="submit">Let me in!</button>
+          <p class="account-signup">Already have an account? <a href="login.html">Login here</a>
+
         </form>
-        <p class="account-signup">Already have an account? <a href="login.html">Login here</a>
       </div>
       
 
