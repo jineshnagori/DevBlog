@@ -1,187 +1,278 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DevBlog is the website dedicated only for true developers.">
-    <meta name="keywords" content="DevBlog, Blogs for Developer">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
-    
+ <!DOCTYPE html>
+ <html lang="en">
 
-    <!-- <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2593/2593549.png"> -->
-    <link rel="icon" type="image/x-icon" href="./img/blog.png">
-    <title>DevBlog - Blog for Developers</title>
-    <link rel="stylesheet" href="css/style.css" id="theme-sheet">
-</head>
-
-<body style="background-image:linear-gradient(lightskyblue,violet,pink)">
-    <!-- Navbar -->
-    <nav class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
-        <div class="container"> 
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <span class="ml-3 font-weight-bold font2">DevBlog</span>
-            </a>
-            <button class="navbar-toggler navbar-toggler-right border-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-            <div class="collapse navbar-collapse" id="navbar4">
-                <ul class="navbar-nav mr-auto pl-lg-4">
-                    <li class="nav-item px-lg-2 active"> <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="about.html"><span
-                                class="d-inline-block d-lg-none icon-width"><i
-                                    class="far fa-user"></i></i></span>About</a> </li>
-
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="contact.html"><span
-                                class="d-inline-block d-lg-none icon-width"><i
-                                    class="far fa-envelope"></i></span>Contact</a> </li>
-                    <li class="nav-item px-lg-2"> <a class="nav-link" href="signup.html"><span
-                        class="d-inline-block d-lg-none icon-width"><i
-                            class="far fa-envelope"></i></span>Register</a> </li>
-                </ul>
-                <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-                    <li class="nav-item"> <a class="nav-link" href="#">
-                            <i class="nav-icon ion-social-twitter"> </i><span class="d-lg-none ml-3">Twitter</span>
-                        </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
-                            <i class="nav-icon ion-social-facebook"> </i><span class="d-lg-none ml-3">Facebook</span>
-                        </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
-                            <i class="nav-icon ion-social-instagram"> </i><span class="d-lg-none ml-3">Instagram</span>
-                        </a> </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">
-                            <i class="nav-icon ion-social-linkedin"> </i><span class="d-lg-none ml-3">Linkedin</span>
-                        </a> </li>
-                    <button id="themeBtn" onclick="theme()">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="orange" class="bi bi-sun-fill" viewBox="0 0 16 16" id="sun">
-                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                            </svg>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-moon-stars-fill" viewBox="0 0 16 16" id="moon">
-                                <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-                                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-                            </svg>
-                    </button>
-                </ul>
-            </div>
-        </div>
-    </nav>
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="DevBlog is the website dedicated only for true developers.">
+     <meta name="keywords" content="DevBlog, Blogs for Developer">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
 
 
-    <!-- Hero section -->
-    <!-- <div class="m-auto content max-width-1 my-2 mt-8">
-        <div class="content-left">
-            <h1>The heaven for bloggers</h1>
-            <p>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
-                can get a good amount of reach from here!</p>
-            <p>My Halloween decorations are staying in the box this year. To be honest, they didn't make it out of the
-                box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
-                longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
-                isn't there more than enough of that going around? Maybe all of us can pretend that Halloween isn't even
-                happening this year?</p>
-        </div>
-        <div class="content-right">
-            <img src="img/home.svg" alt="iBlog">
-        </div>
-    </div> -->
+     <!-- <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2593/2593549.png"> -->
+     <link rel="icon" type="image/x-icon" href="./img/blog.png">
+     <title>DevBlog - Blog for Developers</title>
+     <link rel="stylesheet" href="css/style.css" id="theme-sheet">
+ </head>
 
-    <div class="m-auto content max-width-1 my-2 mt-8">
-        <div class="content-right">
-            <img src="img/blog.jpg" alt="iBlog">
-        </div>
-        <div class="content-left font1">
-            <br><br>
-            <h1 align="center">The heaven for bloggers</h1>
-            <h5>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
-                can get a good amount of reach from here!<h5>
-                    <br />
-            <h5>My Halloween decorations are staying in the box this year. To be honest, they didn't make it out of the
-                box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
-                longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
-                isn't there more than enough of that going around? Maybe all of us can pretend that Halloween isn't even
-                happening this year?</h5>
-        </div>
-        
-    </div>
+ <body>
+     <!-- Navbar -->
+     <nav class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top">
+         <div class="container"> 
+             <a class="navbar-brand d-flex align-items-center" href="index.html">
+                 <span class="ml-3 font-weight-bold font2">DevBlog</span>
+             </a>
+             <button class="navbar-toggler navbar-toggler-right border-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbar4" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
 
-    <div class="max-width-1 m-auto">
-        <hr>
-    </div>
+             <div class="collapse navbar-collapse" id="navbar4">
+                 <ul class="navbar-nav mr-auto pl-lg-4">
+                     <li class="nav-item px-lg-2 active"> <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item px-lg-2"> <a class="nav-link" href="about.html"><span
+                                 class="d-inline-block d-lg-none icon-width"><i
+                                     class="far fa-user"></i></i></span>About</a> </li>
 
-    <!-- Featured article -->
-    <div class="home-articles max-width-1 m-auto font2">
-        <h2 align="center">Featured Articles</h2>
-        <div class="home-article">
-            <div class="home-article-img">
-            </div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html">
-                    <h3 align="center">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-                </a>
+                     <li class="nav-item px-lg-2"> <a class="nav-link" href="contact.html"><span
+                                 class="d-inline-block d-lg-none icon-width"><i
+                                     class="far fa-envelope"></i></span>Contact</a> </li>
+                     <li class="nav-item px-lg-2"> <a class="nav-link" href="signup.html"><span
+                         class="d-inline-block d-lg-none icon-width"><i
+                             class="far fa-envelope"></i></span>Register</a> </li>
+                 </ul>
+                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+                     <li class="nav-item"> <a class="nav-link" href="#">
+                             <i class="nav-icon ion-social-twitter"> </i><span class="d-lg-none ml-3">Twitter</span>
+                         </a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="#">
+                             <i class="nav-icon ion-social-facebook"> </i><span class="d-lg-none ml-3">Facebook</span>
+                         </a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="#">
+                             <i class="nav-icon ion-social-instagram"> </i><span class="d-lg-none ml-3">Instagram</span>
+                         </a> </li>
+                     <li class="nav-item"> <a class="nav-link" href="#">
+                             <i class="nav-icon ion-social-linkedin"> </i><span class="d-lg-none ml-3">Linkedin</span>
+                         </a> </li>
+                     <button id="themeBtn" onclick="theme()">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="orange" class="bi bi-sun-fill" viewBox="0 0 16 16" id="sun">
+                             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                             </svg>
 
-                <div align="center"></div>
-                <h5 align="center">Author Name<br>07 January | 6 min read</h5>
-            </div>
-        </div>
-        
+                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-moon-stars-fill" viewBox="0 0 16 16" id="moon">
+                                 <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+                                 <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+                             </svg>
+                     </button>
+                 </ul>
+             </div>
+         </div>
+     </nav>
 
-    <!-- footer -->
-    <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
-                            rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
-                            vel in justo.</p>
-                    </div>
-                    <div class="col item social" align="center">
-                        <img width="50px" src="data:image/png;base64,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">
-                        <img width="60px" src="data:image/png;base64,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">
-                        <img width="70px" src="data:image/jpeg;base64,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">
-                        <img width="50px" src="data:image/jpeg;base64,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">
-                    </div>
-                </div>
-                <p align="center"class="copyright">Company Name © 2018</p>
-            </div>
-        </footer>
-    </div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    var themeBtn = document.querySelector("#themeBtn");
-    var themeSheet = document.querySelector("#theme-sheet");
 
-    function theme() {
-        console.log("background changed");
-        if(themeSheet.getAttribute("href") == "css/style.css") {
-            themeSheet.href = "css/darktheme.css";
-        } else {
-            themeSheet.href = "css/style.css";
-    }
-}
-</script>
+     <!-- Hero section -->
+     <!-- <div class="m-auto content max-width-1 my-2 mt-8">
+         <div class="content-left">
+             <h1>The heaven for bloggers</h1>
+             <p>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
+                 can get a good amount of reach from here!</p>
+             <p>My Halloween decorations are staying in the box this year. To be honest, they didn't make it out of the
+                 box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
+                 longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
+                 isn't there more than enough of that going around? Maybe all of us can pretend that Halloween isn't even
+                 happening this year?</p>
+         </div>
+         <div class="content-right">
+             <img src="img/home.svg" alt="iBlog">
+         </div>
+     </div> -->
 
-</html>
+     <div class="m-auto content max-width-1 my-2 mt-8">
+         <div class="content-right">
+             <img src="img/blog.jpg" alt="iBlog">
+         </div>
+         <div class="content-left font1">
+             <h1>The heaven for bloggers</h1>
+             <h5>iBlog is a website which lets you submit an article which upon approval will be up on our website and you
+                 can get a good amount of reach from here!<h5>
+                     <br />
+             <h5>My Halloween decorations are staying in the box this year. To be honest, they didn't make it out of the
+                 box last year either. My Halloween spirit has officially been bludgeoned to death by teenagers who no
+                 longer care and a persistent October fear of the Northern California wildfires. And speaking of fear,
+                 isn't there more than enough of that going around? Maybe all of us can pretend that Halloween isn't even
+                 happening this year?</h5>
+         </div>
+
+     </div>
+
+     <div class="max-width-1 m-auto">
+         <hr>
+     </div>
+
+     <!-- Featured article -->
+     <div class="home-articles max-width-1 m-auto font2">
+         <h2>Featured Articles</h2>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/3.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/1.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/2.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/1.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/11.svg" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/3.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/2.png" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+         <div class="home-article">
+             <div class="home-article-img">
+                 <img src="img/11.svg" alt="article">
+             </div>
+             <div class="home-article-content font1">
+                 <a href="blogpost.html">
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                 </a>
+
+                 <div>Author Name</div>
+                 <span>07 January | 6 min read</span>
+             </div>
+         </div>
+
+     </div>
+
+     <!-- footer -->
+     <div class="footer-dark">
+         <footer>
+             <div class="container">
+                 <div class="row">
+                     <div class="col-sm-6 col-md-3 item">
+                         <h3>Services</h3>
+                         <ul>
+                             <li><a href="#">Web design</a></li>
+                             <li><a href="#">Development</a></li>
+                             <li><a href="#">Hosting</a></li>
+                         </ul>
+                     </div>
+                     <div class="col-sm-6 col-md-3 item">
+                         <h3>About</h3>
+                         <ul>
+                             <li><a href="#">Company</a></li>
+                             <li><a href="#">Team</a></li>
+                             <li><a href="#">Careers</a></li>
+                         </ul>
+                     </div>
+                     <div class="col-md-6 item text">
+                         <h3>Company Name</h3>
+                         <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
+                             rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum
+                             vel in justo.</p>
+                     </div>
+                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                 class="icon ion-social-twitter"></i></a><a href="#"><i
+                                 class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                 class="icon ion-social-instagram"></i></a></div>
+                 </div>
+                 <p class="copyright">Company Name © 2018</p>
+             </div>
+         </footer>
+     </div>
+ </body>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+     var themeBtn = document.querySelector("#themeBtn");
+     var themeSheet = document.querySelector("#theme-sheet");
+
+     function theme() {
+         console.log("background changed");
+         if(themeSheet.getAttribute("href") == "css/style.css") {
+             themeSheet.href = "css/darktheme.css";
+         } else {
+             themeSheet.href = "css/style.css";
+     }
+ }
+ </script>
+
+ </html>
