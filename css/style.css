@@ -297,7 +297,7 @@ body {
 }
 
 /* .home-articles{} */
-.footer {
+/* .footer {
 	height: 50px;
 	background-color: var(--main-bg-color);
 	display: flex;
@@ -309,7 +309,7 @@ body {
 
 .footer a {
 	color: white;
-}
+} */
 
 .about-flex {
 	height: 100vh;
@@ -471,37 +471,43 @@ body {
 }
 
 
-.footer-dark {
-	padding: 70px  ;
+/* footer:css */
+ 
+/* .footer-dark {
+	width: 100%;
+	padding-top: 3.5rem;;
+	padding-bottom: 3.5rem;
 	color: #f0f9ff;
 	background-color: #282d32;
-	padding-bottom: 10px;
-	
 }
 
 .footer-dark h3 {
-	margin-top: 0;
-	margin-bottom: 12px;
-	font-weight: bold;
-	font-size: 16px;
+	margin-bottom: 1rem;
+	text-align: center;
+	font-size: 1.2rem;
 }
 
 .footer-dark ul {
 	padding: 0;
+	text-align: center;
 	list-style: none;
-	line-height: 1.6;
-	font-size: 14px;
-	margin-bottom: 0;
+	line-height: 2;
+	font-size: 1rem;
 }
 
 .footer-dark ul a {
-	color: inherit;
+	color: #fff;
 	text-decoration: none;
 	opacity: 0.6;
+	cursor: pointer;
 }
 
 .footer-dark ul a:hover {
 	opacity: 0.8;
+}
+
+.footer-dark .company{
+	border: whitesmoke;
 }
 
 @media (max-width: 767px) {
@@ -576,7 +582,100 @@ body {
 	opacity: 0.3;
 	font-size: 13px;
 	margin-bottom: 0;
+} */
+
+
+/* footer:css  */
+
+.footer{
+	border: 1px solid black;
+	margin-top: 5rem;
+	width: 100%;
+	padding: 0;
+	background-color: #282d32;
+	color: #fff;
 }
+
+.footer-content{
+	/* border: 1px solid white; */
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+.footer-content .footer-content-head{
+	text-align: center;
+	margin-bottom: 1rem;
+	font-weight: bold;
+}
+
+.footer ul{
+	/* border: 1px solid white; */
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+
+.footer ul li{
+	margin-top: 0.5rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer ul li a{
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.footer ul li a:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.footer-content p{
+	margin-top: 1rem;
+	line-height: 25px;
+	width: 90%;
+}
+
+.social-icons{
+	margin-top: 1rem;
+	text-align: center;
+	padding: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.social-icons .icons{
+	font-size: 1.5rem;
+	color: #fff;
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.social-icons .icons:hover{
+	opacity: 0.6;
+}
+
+.social-icons p{
+	margin-top: 1rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .footer{
+		text-align: center;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer{
+		text-align: center;
+	}
+}
+
+/* end-footer:css  */
+
 .contact {
 	display: flex;
 	justify-content: center;
