@@ -86,7 +86,7 @@ body {
 .btn {
 	padding: 0px 20px;
 	padding-top: 3px;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 	border-radius: 6px;
 	font-family: var(--font1);
 	font-size: 16px;
@@ -120,6 +120,14 @@ body {
 	font-family: var(--font1);
 	font-size: 40px;
 }
+
+.login-text
+{
+	font-weight: bold;
+	font-size: 1.5rem;
+	color: #0d6efd;
+}
+
 
 .form-box input {
 	margin: 5px;
