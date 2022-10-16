@@ -192,7 +192,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module">
-    import { Octokit } from "https://cdn.pika.dev/@octokit/core"; const octokit = new Octokit({ auth: "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" }); octokit.request('GET /repos/:owner/:repo/contributors', { owner: "jonmichael69", repo: "hacktoberfest2022-WebDev"
+    import { Octokit } from "https://cdn.pika.dev/@octokit/core"; const octokit = new Octokit({ auth: "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" }); octokit.request('GET /repos/:owner/:repo/contributors', { owner: "jonmichael69", repo: "hacktoberfest2022-WebDev"
     }).then(response=> document.getElementById('test1').innerHTML = response.data.map(user => `
     <div>
         <div class="img-placeholder">
