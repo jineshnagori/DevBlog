@@ -196,7 +196,7 @@
     = response.data.map(user => `
     <div>
         <div class="img-placeholder">
-            <img src=${user.avatar_url}>
+            <img class="img-fluid" src=${user.avatar_url}>
         </div>
         <div class="mt-3">
             <a href="${user.html_url}" target="_blank">
@@ -205,10 +205,7 @@
             <p><i class="fa-solid fa-user"></i> Total contributions : ${user.contributions}</p>
         </div>
     </div>` ).join('') );
-</script>
-
-
-<script>
+    
     var themeBtn = document.querySelector("#themeBtn");
     var themeSheet = document.querySelector("#theme-sheet");
 
@@ -220,12 +217,7 @@
             themeSheet.href = "assets/css/style.css";
         }
     }
-</script>
-
-</html>
-
-
-<script>
+    
     var themeBtn = document.querySelector("#themeBtn");
     var themeSheet = document.querySelector("#theme-sheet");
 
