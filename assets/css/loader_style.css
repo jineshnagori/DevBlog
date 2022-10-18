@@ -24,16 +24,16 @@ section{
 }
 
 .loading{
-    position: relative;
-    width: 250px;
-    height: 250px;
+    position: absolute;
+    width: 270px;
+    height: 270px;
 }
 .loading .blocks{
     position: absolute;
-    width: 8px;
-    height: 25px;
-    background: #050c09;
-    border-radius: 8px;
+    width: 15px;
+    height: 40px;
+    background: #1b4030;
+    border-radius: 12px;
     left: 50%;
     transform: rotate(calc(18deg * var(--i)));
     transform-origin: 0 125px;
@@ -46,7 +46,7 @@ section{
         box-shadow: none;
     }
     50.1%,100%{
-        background: #39FF14;
+        background: #14e0ff;
         box-shadow: 0 0 5px #39FF14,
         0 0 15px #39FF14,
         0 0 30px #39FF14;
