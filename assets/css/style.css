@@ -1611,8 +1611,20 @@ fieldset {
   margin-bottom: 30px;
 }
 
+.text-big {
+  font-size: 50px;
+}
+
 @media only screen and (max-width: 600px) {
   .blogForm {
     margin-top: 20%;
+  }
+
+  div.about-style {
+    width: 376px !important;
+  }
+
+  .text-big {
+    font-size: 30px !important;
   }
 }
