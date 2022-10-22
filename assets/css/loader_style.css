@@ -6,7 +6,7 @@
 }
 
 section{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -24,7 +24,7 @@ section{
 }
 
 .loading{
-    position: absolute;
+    position: relative;
     width: 270px;
     height: 270px;
 }
@@ -32,7 +32,7 @@ section{
     position: absolute;
     width: 15px;
     height: 40px;
-    background: #1b4030;
+    background: #3a401b;
     border-radius: 12px;
     left: 50%;
     transform: rotate(calc(18deg * var(--i)));
