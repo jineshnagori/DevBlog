@@ -176,12 +176,13 @@ border-radius: 4px;
 }
 
 .card:hover .card__front {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-
+     padding: 18px;
+     -webkit-transform: rotateY(0);
+     -moz-transform: rotateY(0);
 }
-
 .card:hover .card__back {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
+.card__back {
+  padding: 18px 0;
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
 }
