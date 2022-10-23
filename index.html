@@ -16,7 +16,17 @@
     <title>DevBlog - Blog for Developers</title>
     <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet">
 </head>
+<style>
+    .cd-top--is-visible { 
+  visibility: visible;
+  opacity: 100;
+ 
+}
 
+.cd-top--fade-out { 
+  opacity: .5;
+}
+</style>
 <body>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -29,6 +39,10 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+var offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
+  offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+  scrollDuration = 700;
 </script>
 <!--End of Tawk.to Script-->
     <!-- Navbar -->
@@ -273,7 +287,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </div>
 
-    
+    <button><a href="#" class="cd-top text-replace js-cd-top" >Top</a></button>
 
 
     <!-- footer -->
@@ -282,7 +296,7 @@ s0.parentNode.insertBefore(s1,s0);
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3 id="footer-heading">Services</h3>
+                        <h3>Services</h3>
                         <ul>
                             <li><a href="#">Web design</a></li>
                             <li><a href="#">Development</a></li>
@@ -290,7 +304,7 @@ s0.parentNode.insertBefore(s1,s0);
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <h3 id="footer-heading">About</h3>
+                        <h3>About</h3>
                         <ul>
                             <li><a href="#">Company</a></li>
                             <li><a href="#">Team</a></li>
@@ -298,7 +312,7 @@ s0.parentNode.insertBefore(s1,s0);
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3 id="footer-heading">Company Name</h3>
+                        <h3>Company Name</h3>
                         <p>This company provides open source for all the users, show their coding skills and upload their blogs...</p>
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
