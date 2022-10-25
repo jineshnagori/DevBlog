@@ -16,7 +16,17 @@
     <title>DevBlog - Blog for Developers</title>
     <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet">
 </head>
+<style>
+    .cd-top--is-visible { 
+  visibility: visible;
+  opacity: 100;
+ 
+}
 
+.cd-top--fade-out { 
+  opacity: .5;
+}
+</style>
 <body>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -29,6 +39,10 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
+
+var offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
+  offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+  scrollDuration = 700;
 </script>
 <!--End of Tawk.to Script-->
     <!-- Navbar -->
@@ -273,6 +287,7 @@ s0.parentNode.insertBefore(s1,s0);
         </div>
     </div>
 
+
     
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light" id="footer">
@@ -379,6 +394,8 @@ s0.parentNode.insertBefore(s1,s0);
    
   </footer>
   <!-- Footer -->
+
+    <button><a href="#" class="cd-top text-replace js-cd-top" >Top</a></button>
 
 
     </div>

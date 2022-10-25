@@ -482,6 +482,40 @@ body {
   box-shadow: none;
 }
 
+/* Footer responsive and style add here START*/
+@media screen and (max-width: 1214px){
+  .row{
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 576px){
+  div.col-sm-6 ul li{
+    list-style-type: none !important;
+  }
+}
+h3#footer-heading{
+  font-size: 150%;
+}
+div.col-sm-6 ul{
+  padding: 5%;
+}
+div.col-md-6 p{
+  padding: 4%;
+}
+div.col-sm-6 ul li{
+  list-style-type: disc;
+  padding: 1%;
+  font-size: medium;
+}
+div.col-sm-6 ul li a{
+  transition: all 0.3s;
+}
+div.col-sm-6 ul li a:hover{
+  margin-left: 15px;
+  transition:all 0.3s;
+}
+/* Footer responsive and style add here END */
+
 .footer-dark {
   padding: 70px;
   color: #f0f9ff;
@@ -1573,8 +1607,20 @@ fieldset {
   margin-bottom: 30px;
 }
 
+.text-big {
+  font-size: 50px;
+}
+
 @media only screen and (max-width: 600px) {
   .blogForm {
     margin-top: 20%;
+  }
+
+  div.about-style {
+    width: 376px !important;
+  }
+
+  .text-big {
+    font-size: 30px !important;
   }
 }
