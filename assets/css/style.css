@@ -201,7 +201,22 @@ body {
   width: 100%;
   height: 5rem;
 }
-
+.cd-top{
+  background-color: rgb(29, 100, 54);
+  color: white;
+}
+.cd-top:hover{
+  background-color: rgb(190, 154, 23);
+  color: rgb(19, 12, 12);
+}
+.cd{
+  background-color: rgb(29, 100, 54);
+ padding :0.2rem;
+}
+.cd:hover{
+  background-color: rgb(190, 154, 23);
+ 
+}
 .content {
   display: flex;
   justify-content: space-between;
