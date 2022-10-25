@@ -1486,19 +1486,18 @@ fieldset {
   color: white;
   flex-direction: column;
 }
+#footer a:hover{
+  color: rgb(236, 92, 92) !important;
 
-.footer-dark {
-  width: 100% !important;
 }
-
-.footer a {
-  color: white;
-}
-
 .about-flex {
   height: 100vh;
   width: 100vw;
   overflow: auto;
+}
+#footer-container{
+  margin:0px;
+  padding: 0px;
 }
 
 @media screen and (max-width: 1214px) {
