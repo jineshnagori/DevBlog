@@ -113,8 +113,9 @@ body{
 }
 
 .featured{
-  color: white !important;
+  color: white;
   text-align: center;
+  font-size: 1rem;
 }
 
 .btn {
