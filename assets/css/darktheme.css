@@ -109,6 +109,13 @@ body{
 .my-2 {
   margin-top: 32px;
   margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+.featured{
+  color: white;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .btn {
