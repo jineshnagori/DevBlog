@@ -1501,6 +1501,30 @@ fieldset {
   padding: 0px;
 }
 
+.top{
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  color: var(--font-color-black);
+  background-color: var(--btn-bg-color-hover);
+}
+
+.button-def{
+    pointer-events: auto;
+    cursor: pointer;
+    background: var(--btn-bg-color);
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
 @media screen and (max-width: 1214px) {
   .navigation {
     flex-direction: column;
