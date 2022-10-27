@@ -28,6 +28,7 @@
 }
 </style>
 <body>
+<div id="loader"></div>
     <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -40,9 +41,6 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 
-var offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
-  offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-  scrollDuration = 700;
 </script>
 <!--End of Tawk.to Script-->
 
@@ -379,13 +377,25 @@ var offset = 300, // browser window scroll (in pixels) after which the "back to 
 <!-- top button -->
 
 <div>
-    <button class="button-def top">
+    <button id ="buttondeftop">
         <span>Top</span>
     </button>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    var myVar;
+  
+    function myFunction() {
+    myVar = setTimeout(showPage, 1750);
+    }
+  
+    function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+    }
+</script>
 <script>
     var themeBtn = document.querySelector("#themeBtn");
     var themeSheet = document.querySelector("#theme-sheet");
@@ -398,6 +408,21 @@ var offset = 300, // browser window scroll (in pixels) after which the "back to 
             themeSheet.href = "assets/css/style.css";
         }
     }
+
+    
+    var offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
+    offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    scrollDuration = 700;
+
+    const buttondeftop = document.getElementById("buttondeftop");
+    buttondeftop.addEventListener("click", function(){
+      window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+      });
+    });
+    
 </script>
 
 </html>
