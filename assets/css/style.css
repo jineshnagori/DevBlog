@@ -1501,18 +1501,21 @@ fieldset {
   padding: 0px;
 }
 
-.top{
+#buttondeftop {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   font-weight: 700;
   font-size: 0.85rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  color: var(--font-color-black);
+  color: #ca8346;
   background-color: var(--btn-bg-color-hover);
 }
+#buttondeftop:hover {
+  color: #0cf;
+}
 
-.button-def{
+#buttondeftop {
     pointer-events: auto;
     cursor: pointer;
     background: var(--btn-bg-color);
