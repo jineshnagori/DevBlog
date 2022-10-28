@@ -208,7 +208,7 @@
 
     <!-- Featured article -->
 
-    <h2>Featured Articles</h2>
+    <h2 class="featured">Featured Articles</h2>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -392,15 +392,5 @@
         localStorage.setItem("isDarkmodeEnabled", false);
       }
     }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const isDarkmodeEnabled = localStorage.getItem("isDarkmodeEnabled");
-
-      if (isDarkmodeEnabled) {
-        themeSheet.href = "assets/css/darktheme.css";
-      } else {
-        themeSheet.href = "assets/css/style.css";
-      }
-    });
   </script>
 </html>

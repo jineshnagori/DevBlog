@@ -226,7 +226,7 @@
 
           <div class="faq-three">
             <!-- faq question -->
-            <h1 class="faq-page">Freedom and Ownership</h1>
+            <h1 class="faq-page" style="color: black">Freedom and Ownership</h1>
 
             <!-- faq answer -->
             <div class="faq-body">
@@ -305,30 +305,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/about.js"></script>
-
-  <script>
-    var themeBtn = document.querySelector("#themeBtn");
-    var themeSheet = document.querySelector("#theme-sheet");
-
-    function theme() {
-      console.log("background changed");
-      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
-        themeSheet.href = "assets/css/darktheme.css";
-        localStorage.setItem("isDarkmodeEnabled", true);
-      } else {
-        themeSheet.href = "assets/css/style.css";
-        localStorage.setItem("isDarkmodeEnabled", false);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const isDarkmodeEnabled = localStorage.getItem("isDarkmodeEnabled");
-
-      if (isDarkmodeEnabled) {
-        themeSheet.href = "assets/css/darktheme.css";
-      } else {
-        themeSheet.href = "assets/css/style.css";
-      }
-    });
-  </script>
 </html>
