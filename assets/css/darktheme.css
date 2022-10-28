@@ -6,8 +6,8 @@
   /* --main-bg-color: black; */
   --font1: "Baloo Bhaina 2", cursive;
   --font2: "Roboto", sans-serif;
-  --articles-bg:rgb(18, 18, 18);
-  --font-color:white;
+  --articles-bg: rgb(18, 18, 18);
+  --font-color: white;
 }
 
 ::-webkit-scrollbar-track {
@@ -36,36 +36,35 @@
 
 /* changes */
 
-.nav-icon{
-    color: white;
+.nav-icon {
+  color: white;
 }
 
-.bg-light{
-    background-color: #282d32 !important;
+.bg-light {
+  background-color: #282d32 !important;
 }
 
-hr{
-    color: white;
+hr {
+  color: white;
 }
 
-.nav-link{
-    color: white !important;
+.nav-link {
+  color: white !important;
 }
 
-#themeBtn{
-    border: none;
-    background-color: transparent;
-    padding-left: 14px;
+#themeBtn {
+  border: none;
+  background-color: transparent;
+  padding-left: 14px;
 }
 
-#themeBtn #sun{
-    display: none;
+#themeBtn #sun {
+  display: none;
 }
-
 
 /* changes */
 
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -635,4 +634,467 @@ fieldset {
   /* opacity: 0.3; */
   font-size: 13px;
   margin-bottom: 0;
+}
+.faq-heading {
+  border-bottom: #fff;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -20px;
+}
+
+.hr-line {
+  width: 60%;
+  margin: auto;
+}
+
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+  /* background-color: #eee; */
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 25px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+
+.faq-body {
+  margin: auto;
+  /* text-align: center; */
+  width: 60%;
+  padding: auto;
+}
+
+.faq-body p {
+  font-size: large;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+  background-color: transparent;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+  padding: 0 18px;
+  background-color: transparent;
+  display: none;
+  overflow: hidden;
+}
+
+.faq-page:after {
+  content: "\02795";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #eee;
+  float: right;
+  margin-left: 5px;
+}
+
+.about-flex {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  color: white !important;
+}
+
+.text-big {
+  color: black !important;
+  font-size: 50px !important;
+}
+
+.hero {
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 82vh;
+  gap: 3rem;
+}
+
+.hero-text {
+  place-self: center;
+  text-align: center;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+.hero-text p {
+  line-height: 1.5;
+  font-size: 1rem;
+  color: var(--neutral-500);
+}
+
+.hero-image {
+  padding-inline: 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 1100px;
+  max-height: 500px;
+}
+
+.hero-image img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  padding-inline: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  padding-inline: 4rem;
+}
+
+div.about-style {
+  background-color: rgb(180, 196, 220);
+  border-style: line;
+  width: 800px;
+  border: 15px solid rgb(48, 94, 193);
+  padding: 20px;
+  margin: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .about-page {
+    margin-top: -11%;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+
+  .about-page {
+    margin-top: -11%;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-dark .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .about-page {
+    margin-top: -5%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item:not(.social) {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .about-page {
+    margin-top: -11%;
+  }
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 767px) {
+  .footer-dark .item.text {
+    margin-bottom: 0;
+  }
+
+  .about-page {
+    margin-top: -11%;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer-dark .item.social {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .about-page {
+    margin-top: -5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blogForm {
+    margin-top: 20%;
+  }
+
+  div.about-style {
+    width: 376px !important;
+  }
+
+  .text-big {
+    font-size: 30px !important;
+  }
+}
+
+h1.faq-page {
+  color: white;
+}
+
+.wrapper {
+  overflow: hidden;
+  max-width: 390px;
+  background: #3c1053ff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
+}
+
+.wrapper .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+  color: #000;
+}
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked ~ .slider-tab {
+  left: 50%;
+}
+
+#signup:checked ~ label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+
+#signup:checked ~ label.login {
+  color: #000;
+}
+
+#login:checked ~ label.signup {
+  color: #000;
+}
+
+#login:checked ~ label.login {
+  cursor: default;
+  user-select: none;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+
+::selection {
+  background: white;
+  color: #fff;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.form-inner form .field input:focus {
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .field input::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+  color: #b3b3b3;
+}
+
+.form-inner form .pass-link {
+  margin-top: 5px;
+}
+
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: #fa4299;
+  text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+form .btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn .btn-layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(
+    right,
+    #a445b2,
+    #fa4299,
+    #a445b2,
+    #fa4299
+  );
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layer {
+  left: 0;
+}
+
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
