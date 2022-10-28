@@ -1594,3 +1594,7 @@ fieldset {
     font-size: 30px !important;
   }
 }
+
+h1.faq-page {
+  color: black;
+}
