@@ -201,21 +201,20 @@ body {
   width: 100%;
   height: 5rem;
 }
-.cd-top{
+.cd-top {
   background-color: rgb(29, 100, 54);
   color: white;
 }
-.cd-top:hover{
+.cd-top:hover {
   background-color: rgb(190, 154, 23);
   color: rgb(19, 12, 12);
 }
-.cd{
+.cd {
   background-color: rgb(29, 100, 54);
- padding :0.2rem;
+  padding: 0.2rem;
 }
-.cd:hover{
+.cd:hover {
   background-color: rgb(190, 154, 23);
- 
 }
 .content {
   display: flex;
@@ -498,36 +497,36 @@ body {
 }
 
 /* Footer responsive and style add here START*/
-@media screen and (max-width: 1214px){
-  .row{
+@media screen and (max-width: 1214px) {
+  .row {
     flex-direction: row;
   }
 }
-@media screen and (max-width: 576px){
-  div.col-sm-6 ul li{
+@media screen and (max-width: 576px) {
+  div.col-sm-6 ul li {
     list-style-type: none !important;
   }
 }
-h3#footer-heading{
+h3#footer-heading {
   font-size: 150%;
 }
-div.col-sm-6 ul{
+div.col-sm-6 ul {
   padding: 5%;
 }
-div.col-md-6 p{
+div.col-md-6 p {
   padding: 4%;
 }
-div.col-sm-6 ul li{
+div.col-sm-6 ul li {
   list-style-type: disc;
   padding: 1%;
   font-size: medium;
 }
-div.col-sm-6 ul li a{
+div.col-sm-6 ul li a {
   transition: all 0.3s;
 }
-div.col-sm-6 ul li a:hover{
+div.col-sm-6 ul li a:hover {
   margin-left: 15px;
-  transition:all 0.3s;
+  transition: all 0.3s;
 }
 /* Footer responsive and style add here END */
 
@@ -1487,17 +1486,16 @@ fieldset {
   color: white;
   flex-direction: column;
 }
-#footer a:hover{
+#footer a:hover {
   color: rgb(236, 92, 92) !important;
-
 }
 .about-flex {
   height: 100vh;
   width: 100vw;
   overflow: auto;
 }
-#footer-container{
-  margin:0px;
+#footer-container {
+  margin: 0px;
   padding: 0px;
 }
 
@@ -1516,16 +1514,16 @@ fieldset {
 }
 
 #buttondeftop {
-    pointer-events: auto;
-    cursor: pointer;
-    background: var(--btn-bg-color);
-    border: none;
-    padding: 1.5rem 3rem;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    position: relative;
-    display: inline-block;
+  pointer-events: auto;
+  cursor: pointer;
+  background: var(--btn-bg-color);
+  border: none;
+  padding: 1.5rem 3rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1214px) {
@@ -1541,7 +1539,8 @@ fieldset {
 }
 
 .footer-dark {
-  padding: 50px 0;
+  width: 100%;
+  padding-bottom: 50px;
   color: #f0f9ff;
   background-color: #282d32;
 }
@@ -1649,7 +1648,7 @@ fieldset {
   color: whitesmoke;
 }
 
-.copyrigh{
+.copyrigh {
   text-align: center;
   padding-top: 24px;
   /* opacity: 0.3; */
