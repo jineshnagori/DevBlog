@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
-  background: #eeeeee;
+  background: #fcd1a9;
   font-family: 'helvetica neue';
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   background: white;
   padding: 40px;
   text-align: justify;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px 5px rgb(169, 252, 233);
   transform: scale(0.98);
   transition: transform 0.5s;
 }
@@ -42,7 +42,7 @@ header {
 h1 {
   color: white;
   font-size: 7vw;
-  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+  text-shadow: 3px 4px 0 rgb(220, 252, 169);
 }
 
 nav {
@@ -56,7 +56,7 @@ nav {
 
 body.fixed-nav nav {
   position: fixed;
-  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 5px 0 rgb(169, 219, 252);
 }
 
 nav ul {
