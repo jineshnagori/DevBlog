@@ -111,7 +111,7 @@ body {
   font-size: 1rem;
 }
 
-.featured{
+.featured {
   color: white;
   text-align: center;
   font-size: 1rem;
@@ -368,8 +368,6 @@ fieldset {
   border: 1px solid #999;
 }
 
-
-
 .home-articles {
   padding: 18px;
   background-color: var(--articles-bg);
@@ -541,7 +539,8 @@ fieldset {
 }
 
 .footer-dark {
-  padding: 50px 0;
+  width: 100%;
+  padding: 50px;
   color: #f0f9ff;
   background-color: #282d32;
 }
