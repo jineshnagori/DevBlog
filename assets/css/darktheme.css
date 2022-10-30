@@ -285,11 +285,13 @@ textarea {
 
 #contact {
   background: var(--articles-bg);
-  padding: 25px;
+  padding-left: 200px;
+  padding-right: 200px;
   margin: 50px 0;
 }
 
 #contact h3 {
+  text-align: center;
   color: #f96;
   display: block;
   font-size: 30px;
@@ -297,6 +299,7 @@ textarea {
 }
 
 #contact h4 {
+  text-align: center;
   margin: 5px 0 15px;
   display: block;
   font-size: 13px;
