@@ -511,14 +511,14 @@ h3#footer-heading {
   font-size: 150%;
 }
 div.col-sm-6 ul {
-  padding: 5%;
+  padding: 0%;
 }
 div.col-md-6 p {
-  padding: 4%;
+  padding: 0%;
 }
 div.col-sm-6 ul li {
   list-style-type: disc;
-  padding: 1%;
+  padding: 0%;
   font-size: medium;
 }
 div.col-sm-6 ul li a {
