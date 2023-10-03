@@ -19,16 +19,14 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-bg-color);
-  background-image: -webkit-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.2) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.2) 75%,
-    transparent 75%,
-    transparent
-  );
+  background-image: -webkit-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.2) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 75%,
+      transparent 75%,
+      transparent);
 }
 
 #themeBtn {
@@ -201,21 +199,26 @@ body {
   width: 100%;
   height: 5rem;
 }
+
 .cd-top {
   background-color: rgb(29, 100, 54);
   color: white;
 }
+
 .cd-top:hover {
   background-color: rgb(190, 154, 23);
   color: rgb(19, 12, 12);
 }
+
 .cd {
   background-color: rgb(29, 100, 54);
   padding: 0.2rem;
 }
+
 .cd:hover {
   background-color: rgb(190, 154, 23);
 }
+
 .content {
   display: flex;
   justify-content: space-between;
@@ -471,7 +474,7 @@ body {
   padding: 3vmax;
 }
 
-.contact-form > div {
+.contact-form>div {
   margin: 1vmax;
   padding: 0.3vmax;
   border-radius: 10px;
@@ -502,32 +505,40 @@ body {
     flex-direction: row;
   }
 }
+
 @media screen and (max-width: 576px) {
   div.col-sm-6 ul li {
     list-style-type: none !important;
   }
 }
+
 h3#footer-heading {
   font-size: 150%;
 }
+
 div.col-sm-6 ul {
   padding: 0%;
 }
+
 div.col-md-6 p {
   padding: 0%;
 }
+
 div.col-sm-6 ul li {
   list-style-type: disc;
   padding: 0%;
   font-size: medium;
 }
+
 div.col-sm-6 ul li a {
   transition: all 0.3s;
 }
+
 div.col-sm-6 ul li a:hover {
   margin-left: 15px;
   transition: all 0.3s;
 }
+
 /* Footer responsive and style add here END */
 
 .footer-dark {
@@ -613,7 +624,7 @@ div.col-sm-6 ul li a:hover {
   }
 }
 
-.footer-dark .item.social > a {
+.footer-dark .item.social>a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -627,7 +638,7 @@ div.col-sm-6 ul li a:hover {
   opacity: 0.75;
 }
 
-.footer-dark .item.social > a:hover {
+.footer-dark .item.social>a:hover {
   opacity: 0.9;
 }
 
@@ -750,25 +761,25 @@ input[type="radio"] {
   display: none;
 }
 
-#signup:checked ~ .slider-tab {
+#signup:checked~.slider-tab {
   left: 50%;
 }
 
-#signup:checked ~ label.signup {
+#signup:checked~label.signup {
   color: #fff;
   cursor: default;
   user-select: none;
 }
 
-#signup:checked ~ label.login {
+#signup:checked~label.login {
   color: #000;
 }
 
-#login:checked ~ label.signup {
+#login:checked~label.signup {
   color: #000;
 }
 
-#login:checked ~ label.login {
+#login:checked~label.login {
   cursor: default;
   user-select: none;
 }
@@ -853,13 +864,11 @@ form .btn .btn-layer {
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(
-    right,
-    #a445b2,
-    #fa4299,
-    #a445b2,
-    #fa4299
-  );
+  background: -webkit-linear-gradient(right,
+      #a445b2,
+      #fa4299,
+      #a445b2,
+      #fa4299);
   border-radius: 5px;
   transition: all 0.4s ease;
 }
@@ -1489,14 +1498,17 @@ fieldset {
   color: white;
   flex-direction: column;
 }
+
 #footer a:hover {
   color: rgb(236, 92, 92) !important;
 }
+
 .about-flex {
   height: 100vh;
   width: 100vw;
   overflow: auto;
 }
+
 #footer-container {
   margin: 0px;
   padding: 0px;
@@ -1512,6 +1524,7 @@ fieldset {
   color: #ca8346;
   background-color: var(--btn-bg-color-hover);
 }
+
 #buttondeftop:hover {
   color: #0cf;
 }
@@ -1624,7 +1637,7 @@ fieldset {
   }
 }
 
-.footer-dark .item.social > a {
+.footer-dark .item.social>a {
   font-size: 20px;
   width: 36px;
   height: 36px;
@@ -1638,7 +1651,7 @@ fieldset {
   opacity: 0.75;
 }
 
-.footer-dark .item.social > a:hover {
+.footer-dark .item.social>a:hover {
   opacity: 0.9;
 }
 
