@@ -1,23 +1,23 @@
-
-body{
+body {
     background-image: url(https://wallpaperaccess.com/full/1317087.jpg);
-    
-    
-}
 
-.navbar ul{
-overflow: auto;
 
 }
+
+.navbar ul {
+    overflow: auto;
+
+}
+
 .navbar li {
-    
+
     float: left;
     list-style: none;
     margin: 20px 20px;
 
 }
 
-.button{
+.button {
     background-color: brown;
     border: none;
     color: black;
@@ -25,18 +25,21 @@ overflow: auto;
     font-size: 20px;
     border-radius: 5px;
 }
-.button:hover{
-    background-color:rgb(87, 20, 20);
+
+.button:hover {
+    background-color: rgb(87, 20, 20);
 }
-.main{
+
+.main {
     text-align: center;
     color: antiquewhite;
     font-family: cursive;
     font-size: 50px;
     margin: 100px 100px 100px 100px;
 }
-.footer{
-    background-color:rgb(226, 195, 153);
+
+.footer {
+    background-color: rgb(226, 195, 153);
     opacity: 0.4;
     margin-top: 200px;
     text-align: center;
