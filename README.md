@@ -19,7 +19,7 @@
 - You can sign up **anytime between September 26 and October 31**.
 ---
 
-## How can you Join?
+## How to participate?
 
 ### Step - 1:
 
@@ -31,7 +31,7 @@ Register for Hacktoberfest: Navigate to the [Hacktoberfest registration page](ht
 
 ### Step - 3:
 
-Find good projects worth contributing on the GitHub page. You can type `label:hactoberfest is:issue is:open`
+Find good projects worth contributing to on the GitHub page. You can type `label:hactoberfest is:issue is:open`
 
 You can add a language label of your choice to filter open issues. If you are a beginner and can’t find good issues then there’s tag `label:good first issue` which filters out issues for beginners who want to contribute.
 
@@ -76,9 +76,9 @@ For your PR to count it must be:
 
 ## Rules To Contribute To This Repo
 
-- You can write web development code in HTML, CSS and JavaScript.
-- Follow file naming convention for all your pull requests.
-- While adding any content it should be inside its appropiate directory
+- You can write web development code in HTML, CSS, and JavaScript.
+- Follow file naming conventions for all your pull requests.
+- While adding any content it should be inside its appropiate directory.
 - If there is any problem with inaccurate solution create an issue!
 
 ## Steps For Contribution
@@ -93,7 +93,7 @@ For your PR to count it must be:
 
 ### FEATURES
 
-1. Beginner-friendly
+1. Beginner-friendly.
 2. Targeted for developers, content writers, and programming enthusiasts.
 3. Would also help participants who are not familiar with development but are eager to participate in open source.
 
