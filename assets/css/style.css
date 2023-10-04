@@ -1343,6 +1343,14 @@ footer {
   margin: 90px 0;
 }
 
+
+@media (max-width: 768px) {
+  #contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 #contact h3 {
   text-align: center;
   color: #f96;
