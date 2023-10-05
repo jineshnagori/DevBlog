@@ -508,11 +508,17 @@ body {
   .row {
     flex-direction: row;
   }
+  .container{
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 576px) {
   div.col-sm-6 ul li {
     list-style-type: none !important;
+  }
+  .container{
+    width: 90%;
   }
 }
 
@@ -586,6 +592,10 @@ div.col-sm-6 ul li a:hover {
   .about-page {
     margin-top: -11%;
   }
+
+  .container{
+    width: 90%;
+  }
 }
 
 .footer-dark .item.text {
@@ -599,6 +609,10 @@ div.col-sm-6 ul li a:hover {
 
   .about-page {
     margin-top: -11%;
+  }
+
+  .container{
+    width: 90%;
   }
 }
 
@@ -1641,12 +1655,15 @@ fieldset {
   .about-page {
     margin-top: -5%;
   }
+
+  
 }
 
 @media screen and (min-width: 991px) {
   .navbar-collapse {
     justify-content: inherit;
   }
+  
 }
 
 .footer-dark .item.social>a {
@@ -1710,4 +1727,9 @@ fieldset {
 
 h1.faq-page {
   color: black;
+}
+
+
+.container{
+  width: 90%;
 }
