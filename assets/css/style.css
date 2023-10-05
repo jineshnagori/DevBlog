@@ -552,11 +552,19 @@ div.col-sm-6 ul li a:hover {
   padding-bottom: 10px;
 }
 
+/* Initial styles */
 .footer-dark h3 {
   margin-top: 0;
   margin-bottom: 12px;
   font-weight: bold;
   font-size: 16px;
+}
+
+/* Hover effect */
+.footer-dark h3:hover {
+  /* Add your hover styles here */
+  color: #ff5733; /* Change text color on hover */
+  /* Add any other styles you desire for the hover effect */
 }
 
 .footer-dark ul {
@@ -1573,13 +1581,6 @@ fieldset {
   background-color: #282d32;
 }
 
-.footer-dark h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: bold;
-  font-size: 16px;
-}
-
 .footer-dark ul {
   padding: 0;
   list-style: none;
@@ -1710,4 +1711,7 @@ fieldset {
 
 h1.faq-page {
   color: black;
+}
+#scrollToTop{
+  cursor: pointer;
 }

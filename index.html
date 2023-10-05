@@ -309,7 +309,7 @@
             </ul>
           </div>
           <div class="col-md-6 item text">
-            <h3>DevBlog</h3>
+            <h3 id="scrollToTop">DevBlog</h3>
             <p>
               DevBlog is a Blogpost Platform where the Users can Upload their Articles and Literatures on the Web and the maintainers of the Website 
               can approve of them and then Publish it onto the Blog. It is a great tool for People worldwide to connect with each other using their Articles
@@ -328,6 +328,19 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Select the "DevBlog" element
+const scrollToTopLink = document.getElementById("scrollToTop");
+
+// Add a click event listener to the element
+scrollToTopLink.addEventListener("click", function() {
+    // Smoothly scroll to the top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
 <script>
   var themeBtn = document.querySelector("#themeBtn");
   var themeSheet = document.querySelector("#theme-sheet");
