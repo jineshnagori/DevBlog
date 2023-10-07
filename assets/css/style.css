@@ -1765,3 +1765,139 @@ h1.faq-page {
       width: 100%;
   }
 }
+.about-hero{
+   
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 1rem;
+
+}
+
+.heading h1{
+    color: #282d32;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.about-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 65px;
+
+}
+
+.hero-content{
+  flex: 1;
+  width: 600px;
+  margin: 0px 25px;
+  animation: fadeInUp 2s ease;
+
+
+}
+
+.hero-content h2{
+  font-size: 38px;
+  margin-bottom: 20px;
+  color:#333;
+}
+
+.hero-content p{
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.hero-content button{
+  display: inline-block;
+  background-color: #282d32;
+  color:#fff;
+  padding:12px 24px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover{
+  background-color: #282d32;
+  transform: scale(1.1);
+}
+
+.hero-about-image{
+  flex: 1;
+  width: 600px;
+  margin: auto;
+  animation: fadeInRight 2s ease;
+
+}
+
+.about-img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px){
+  .heading h1{
+    font-size: 45px;
+    margin-top: 30px;
+  }
+  .about-hero{
+    margin: 0px;
+    margin-top: 3rem;
+  }
+  .about-container{
+    width:100%;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 40px;
+  }
+  .hero-content{
+    width: 100%;
+    margin:35px 0px;
+  }
+  .hero-content h2{
+    font-size: 30px;
+  }
+  .hero-content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .hero-content button{
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  .hero-about-image{
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+}
+@keyframes fadeInUp {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+}
+@keyframes fadeInRight {
+  0%{
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+}
