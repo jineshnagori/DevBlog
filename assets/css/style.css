@@ -56,7 +56,15 @@ body {
 .font2 {
   font-family: var(--font2);
 }
-
+.featured {
+  font-family: var(--font1); /* Replace "Your Stylish Font" with the desired font name */
+  font-size: 36px; /* Adjust the font size as needed */
+  color: #000000; /* Change the color to your desired color code */
+  text-transform: uppercase; /* Convert text to uppercase */
+  text-decoration: underline; /* Add underline */
+  text-align: center;
+  /* You can add more styles as needed */
+}
 .max-width-1 {
   max-width: 90vw;
 }
