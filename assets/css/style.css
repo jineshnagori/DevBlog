@@ -1741,3 +1741,35 @@ h1.faq-page {
 .container{
   width: 90%;
 }
+.container2 {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  max-width: 800px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Contact Form */
+#contact-form {
+  padding: 20px;
+}
+
+/* Adjust form elements for smaller screens */
+@media (max-width: 768px) {
+  .container2 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+      width: 100%;
+      margin-bottom: 10px; /* Add some space between form fields */
+  }
+
+  button[type="submit"] {
+      width: 100%;
+  }
+}
