@@ -293,20 +293,32 @@
             )
             .join(""))
       );
-
-    var themeBtn = document.querySelector("#themeBtn");
+  </script>
+  <script>
     var themeSheet = document.querySelector("#theme-sheet");
+    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
 
-    function theme() {
-      console.log("background changed");
-      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
+    function applyTheme() {
+      if (isDarkModeEnabled === "true") {
         themeSheet.href = "assets/css/darktheme.css";
       } else {
         themeSheet.href = "assets/css/style.css";
       }
     }
-  </script>
 
+    applyTheme();
+
+    function theme() {
+      console.log("background changed");
+      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
+        themeSheet.href = "assets/css/darktheme.css";
+        localStorage.setItem("isDarkmodeEnabled", true);
+      } else {
+        themeSheet.href = "assets/css/style.css";
+        localStorage.setItem("isDarkmodeEnabled", false);
+      }
+    }
+  </script>
   <!-- Fontawesome Script -->
   <script
     src="https://kit.fontawesome.com/6d2226036d.js"
