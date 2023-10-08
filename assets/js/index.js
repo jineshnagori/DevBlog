@@ -16,3 +16,14 @@ signupLink.onclick = (() => {
   signupBtn.click();
   return false;
 });
+
+let follower = document.getElementById("circle");
+
+window.addEventListener("mousemove", function (details) {
+  let y = details.clientY;
+  let x = details.clientX;
+  setTimeout(function () {
+    follower.style.top = `${y}px`;
+    follower.style.left = `${x}px`;
+  }, 50);
+});

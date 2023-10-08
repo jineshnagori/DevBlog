@@ -1723,6 +1723,18 @@ fieldset {
   .text-big {
     font-size: 30px !important;
   }
+
+#circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  width: 30px;
+  background-color: rgb(177, 170, 161);
+  height: 30px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+	
 }
 
 h1.faq-page {
