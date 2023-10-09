@@ -329,14 +329,14 @@ body {
     & h3 {
       color: black;
       font-weight: bolder;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
   & div {
     color: rgb(72, 72, 72);
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   & span {
