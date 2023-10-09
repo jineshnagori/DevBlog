@@ -956,9 +956,12 @@ form .btn input[type="submit"] {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active,
 .faq-page:hover {
-  background-color: transparent;
+  background-color: #338AFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  height: 45px;
 }
-
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
   padding: 0 18px;
