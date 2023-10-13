@@ -736,6 +736,7 @@ body {
   height: 100%;
   width: 100%;
   place-items: center;
+  background-color: #F5F4FE !important;
 }
 
 ::selection {
@@ -961,8 +962,9 @@ form .btn input[type="submit"] {
 /* Style the buttons that are used to open and close the faq-page body */
 .faq-page {
   /* background-color: #eee; */
-  color: #fff;
+  background-color: white ;
   font-size: 25px;
+  border-radius: 10px;
   cursor: pointer;
   padding: 25px 20px;
   width: 60%;
@@ -973,6 +975,9 @@ form .btn input[type="submit"] {
 }
 
 .faq-body {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: white ;
   margin: auto;
   /* text-align: center; */
   width: 60%;
@@ -986,18 +991,23 @@ form .btn input[type="submit"] {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.faq-page:hover {
+.active{
   background-color: #338AFF;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   height: 45px;
 }
+.activefaq{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
   padding: 0 18px;
-  background-color: transparent;
+  background-color: white;
   display: none;
   overflow: hidden;
 }
@@ -1037,7 +1047,7 @@ html {
 
 body {
   font-family: var(--ubuntuMono);
-  background-color: #fff !important;
+  
 }
 
 li {
@@ -1619,7 +1629,7 @@ fieldset {
   width: 100%;
   padding-bottom: 50px;
   color: #f0f9ff;
-  background-color: #282d32;
+  background-color: #000000;
 }
 
 .footer-dark h3 {
@@ -1819,7 +1829,7 @@ h1.faq-page {
 
 .about-hero {
 
-  background-color: #fff;
+  /*background-color: #fff; */
   overflow: hidden;
   margin-bottom: 1rem;
 

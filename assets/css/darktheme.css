@@ -544,9 +544,10 @@ fieldset {
 
 .footer-dark {
   width: 100%;
-  padding: 50px;
+  padding: 70px;
   color: #f0f9ff;
   background-color: #282d32;
+  padding-bottom: 50px; 
 }
 
 .footer-dark h3 {
@@ -579,6 +580,10 @@ fieldset {
     text-align: center;
     padding-bottom: 20px;
   }
+
+  .about-page {
+    margin-top: -11%;
+  }
 }
 
 .footer-dark .item.text {
@@ -588,6 +593,10 @@ fieldset {
 @media (max-width: 767px) {
   .footer-dark .item.text {
     margin-bottom: 0;
+  }
+
+  .about-page {
+    margin-top: -11%;
   }
 }
 
@@ -605,7 +614,61 @@ fieldset {
     text-align: center;
     margin-top: 20px;
   }
+
+  .about-page {
+    margin-top: -5%;
+  }
 }
+
+/* Footer responsive and style add here START*/
+@media screen and (max-width: 1214px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.col-sm-6 ul li {
+    list-style-type: none !important;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+h3#footer-heading {
+  font-size: 150%;
+}
+
+div.col-sm-6 ul {
+  padding: 0%;
+}
+
+div.col-md-6 p {
+  padding: 0%;
+}
+
+div.col-sm-6 ul li {
+  list-style-type: disc;
+  padding: 0%;
+  font-size: medium;
+}
+
+div.col-sm-6 ul li a {
+  transition: all 0.3s;
+}
+
+div.col-sm-6 ul li a:hover {
+  margin-left: 15px;
+  transition: all 0.3s;
+}
+
+/* Footer responsive and style add here END */
 
 @media screen and (min-width: 991px) {
   .navbar-collapse {
@@ -653,12 +716,14 @@ fieldset {
 .hr-line {
   width: 60%;
   margin: auto;
+  color: #9dabff;
 }
 
 /* Style the buttons that are used to open and close the faq-page body */
 .faq-page {
-  /* background-color: #eee; */
+  background-color: #1e1e1e;
   color: #fff;
+  border-radius: 10px;
   font-size: 25px;
   cursor: pointer;
   padding: 25px 20px;
@@ -670,6 +735,8 @@ fieldset {
 }
 
 .faq-body {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   margin: auto;
   /* text-align: center; */
   width: 60%;
@@ -683,15 +750,30 @@ fieldset {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.faq-page:hover {
-  background-color: transparent;
+.active{
+  background-color: #338AFF;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  height: 45px;
 }
+/* Add a background color to the faq if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.activefaq{
+  background-color: #353535;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+/* .activefaq:hover{
+  background-color: #1e1e1e;
+} */
 
 /* Style the faq-page panel. Note: hidden by default */
 .faq-body {
   padding: 0 18px;
-  background-color: transparent;
+  background-color: #353535;
   display: none;
   overflow: hidden;
 }
@@ -710,6 +792,63 @@ fieldset {
   width: 100vw;
   overflow: auto;
   color: white !important;
+}
+
+.heading h1 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+} 
+
+.about-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 65px;
+
+}
+
+.hero-content {
+  flex: 1;
+  width: 600px;
+  margin: 0px 25px;
+  animation: fadeInUp 2s ease;
+
+
+}
+
+.hero-content h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.hero-content button {
+  display: inline-block;
+  background-color: #9dabff;
+  color: black;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #4c7dfe;
+  transform: scale(1.1);
+
 }
 
 .text-big {
@@ -763,6 +902,20 @@ fieldset {
   height: 100%;
 }
 
+.hero-about-image {
+  flex: 1;
+  width: 600px;
+  margin: auto;
+  animation: fadeInRight 2s ease;
+
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
 .hero-text h1 {
   font-size: 3rem;
 }
@@ -789,6 +942,8 @@ div.about-style {
   padding: 20px;
   margin: 20px;
 }
+
+
 
 @media (max-width: 767px) {
   .footer-dark .item:not(.social) {
