@@ -195,7 +195,7 @@ body {
   font-weight: bolder;
 }
 
-.nav-item{
+.nav-item {
   font-size: 20px;
 }
 
@@ -315,7 +315,8 @@ body {
 }
 
 .home-article img {
-  width: 300px;
+  width: 30vw;
+  height: 34vh;
 }
 
 .home-article-content {
@@ -323,9 +324,26 @@ body {
   padding: 25px;
 }
 
-.home-article-content a {
-  text-decoration: none;
-  color: black;
+.home-article-content {
+  & a {
+    & h3 {
+      color: black;
+      font-weight: bolder;
+      font-size: 1.8rem;
+    }
+  }
+
+  & div {
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  & span {
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
 }
 
 /* .home-articles{} */
@@ -413,11 +431,6 @@ body {
     padding: 0;
   }
 
-  .post-img img {
-    width: 100vw;
-    height: auto;
-    margin: 10px;
-  }
 
   .adjust-year {
     position: static;
@@ -426,6 +439,23 @@ body {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+  }
+}
+
+.post-img img {
+  /* max-width: 780px;
+   */
+  /* max-width: 1100px; */
+  width: 95vw;
+  height: 50vh;
+  margin: 10px;
+  object-fit: cover;
+}
+
+@media screen and (min-width:1200px) {
+  .post-img img {
+    width: 80vw;
+    height: 60vh;
   }
 }
 
@@ -508,7 +538,8 @@ body {
   .row {
     flex-direction: row;
   }
-  .container{
+
+  .container {
     width: 90%;
   }
 }
@@ -517,7 +548,8 @@ body {
   div.col-sm-6 ul li {
     list-style-type: none !important;
   }
-  .container{
+
+  .container {
     width: 90%;
   }
 }
@@ -593,7 +625,7 @@ div.col-sm-6 ul li a:hover {
     margin-top: -11%;
   }
 
-  .container{
+  .container {
     width: 90%;
   }
 }
@@ -611,7 +643,7 @@ div.col-sm-6 ul li a:hover {
     margin-top: -11%;
   }
 
-  .container{
+  .container {
     width: 90%;
   }
 }
@@ -1656,14 +1688,14 @@ fieldset {
     margin-top: -5%;
   }
 
-  
+
 }
 
 @media screen and (min-width: 991px) {
   .navbar-collapse {
     justify-content: inherit;
   }
-  
+
 }
 
 .footer-dark .item.social>a {
@@ -1724,17 +1756,17 @@ fieldset {
     font-size: 30px !important;
   }
 
-#circle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border: 1px solid #fff;
-  width: 30px;
-  background-color: rgb(177, 170, 161);
-  height: 30px;
-  border-radius: 50%;
-  pointer-events: none;
-}
-	
+  #circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    width: 30px;
+    background-color: rgb(177, 170, 161);
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
 }
 
 h1.faq-page {
@@ -1742,14 +1774,17 @@ h1.faq-page {
 }
 
 
-.container{
+.container {
   width: 90%;
 }
+
 .container2 {
   padding-top: 80px;
   padding-bottom: 40px;
-  max-width: 800px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px;
+  /* Set a maximum width for the container */
+  margin: 0 auto;
+  /* Center the container horizontally */
 }
 
 /* Contact Form */
@@ -1760,8 +1795,8 @@ h1.faq-page {
 /* Adjust form elements for smaller screens */
 @media (max-width: 768px) {
   .container2 {
-      padding-top: 20px;
-      padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   input[type="text"],
@@ -1769,30 +1804,32 @@ h1.faq-page {
   input[type="tel"],
   input[type="url"],
   textarea {
-      width: 100%;
-      margin-bottom: 10px; /* Add some space between form fields */
+    width: 100%;
+    margin-bottom: 10px;
+    /* Add some space between form fields */
   }
 
   button[type="submit"] {
-      width: 100%;
+    width: 100%;
   }
 }
-.about-hero{
-   
+
+.about-hero {
+
   background-color: #fff;
   overflow: hidden;
   margin-bottom: 1rem;
 
 }
 
-.heading h1{
-    color: #282d32;
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 4rem;
+.heading h1 {
+  color: #282d32;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 4rem;
 }
 
-.about-container{
+.about-container {
 
   display: flex;
   justify-content: center;
@@ -1802,7 +1839,7 @@ h1.faq-page {
 
 }
 
-.hero-content{
+.hero-content {
   flex: 1;
   width: 600px;
   margin: 0px 25px;
@@ -1811,24 +1848,24 @@ h1.faq-page {
 
 }
 
-.hero-content h2{
+.hero-content h2 {
   font-size: 38px;
   margin-bottom: 20px;
-  color:#333;
+  color: #333;
 }
 
-.hero-content p{
+.hero-content p {
   font-size: 24px;
   line-height: 1.5;
   margin-bottom: 40px;
   color: #666;
 }
 
-.hero-content button{
+.hero-content button {
   display: inline-block;
   background-color: #282d32;
-  color:#fff;
-  padding:12px 24px;
+  color: #fff;
+  padding: 12px 24px;
   border-radius: 5px;
   font-size: 20px;
   border: none;
@@ -1836,12 +1873,12 @@ h1.faq-page {
   transition: 0.3s ease;
 }
 
-.hero-content button:hover{
+.hero-content button:hover {
   background-color: #282d32;
   transform: scale(1.1);
 }
 
-.hero-about-image{
+.hero-about-image {
   flex: 1;
   width: 600px;
   margin: auto;
@@ -1849,67 +1886,78 @@ h1.faq-page {
 
 }
 
-.about-img{
+.about-img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px){
-  .heading h1{
+@media screen and (max-width: 768px) {
+  .heading h1 {
     font-size: 45px;
     margin-top: 30px;
   }
-  .about-hero{
+
+  .about-hero {
     margin: 0px;
     margin-top: 3rem;
   }
-  .about-container{
-    width:100%;
+
+  .about-container {
+    width: 100%;
     flex-direction: column;
     margin: 0px;
     padding: 0px 40px;
   }
-  .hero-content{
+
+  .hero-content {
     width: 100%;
-    margin:35px 0px;
+    margin: 35px 0px;
   }
-  .hero-content h2{
+
+  .hero-content h2 {
     font-size: 30px;
   }
-  .hero-content p{
+
+  .hero-content p {
     font-size: 18px;
     margin-bottom: 20px;
   }
-  .hero-content button{
+
+  .hero-content button {
     font-size: 16px;
     padding: 8px 16px;
   }
-  .hero-about-image{
+
+  .hero-about-image {
     width: 100%;
     margin: 2rem auto;
   }
 
 }
+
 @keyframes fadeInUp {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(50px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateY(0px);
   }
-  
+
 }
+
 @keyframes fadeInRight {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-50px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateX(0px);
   }
-  
+
 }
