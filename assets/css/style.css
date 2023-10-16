@@ -202,7 +202,10 @@ body {
 }
 
 .nav-item {
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
 }
 
 .space {
@@ -1004,6 +1007,15 @@ form .btn input[type="submit"] {
   transition: all 0.3s ease-in-out;
   height: 45px;
 }
+
+/* Add the white color of the active button in navbar 
+   you can change it to your own color of choice later
+*/
+
+.active .nav-link {
+  color: #fff !important;
+}
+
 .activefaq{
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
