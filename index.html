@@ -372,6 +372,7 @@
 <script>
     var themeSheet = document.querySelector("#theme-sheet");
     var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
+    
     function applyTheme() {
         if (isDarkModeEnabled === "true") {
             themeSheet.href = "assets/css/darktheme.css";
