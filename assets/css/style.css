@@ -30,6 +30,21 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
+.navbar-frosted.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 1) !important; /* solid white */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-frosted {
+  transition: all 0.4s ease-in-out;
+}
 body {
   font-family: var(--font-family-sans-serif);
   line-height: 1.6;
@@ -71,7 +86,7 @@ a:hover {
 /* Hero Section */
 .hero-section {
     padding: 120px 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-blog.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('../img/hero-blog.jpg') no-repeat center center/cover;
 }
 
 /* Article Card */
@@ -119,7 +134,7 @@ a:hover {
 }
 
 .four_zero_four_bg {
-  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
   height: 400px;
   background-position: center;
 }
@@ -143,29 +158,61 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(33, 37, 41, 0.3); /* semi-transparent dark track */
-  border-radius: 10px;
-  backdrop-filter: blur(5px); /* glassy blur */
-  -webkit-backdrop-filter: blur(5px);
+  background: rgb(33 37 41 / 30%); /* semi-transparent dark track */
+  border-radius: 10px; /* glassy blur */
+  backdrop-filter: blur(5px);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent primary color */
+  background-color: rgb(255 255 255 / 60%); /* semi-transparent primary color */
   border-radius: 10px;
-  border: 2px solid rgba(33, 37, 41, 0.3);
-  backdrop-filter: blur(5px); /* glassy blur on thumb too */
-  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(33 37 41 / 30%); /* glassy blur on thumb too */
+  backdrop-filter: blur(5px);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* more visible on hover */
+  background-color: rgb(255 255 255 / 80%); /* more visible on hover */
   transform: scaleY(1.1);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.6) rgba(33, 37, 41, 0.3);
+  scrollbar-color: rgb(255 255 255 / 60%) rgb(33 37 41 / 30%);
+}
+
+/* Ensure article grid cards are equal height and images align */
+#articles-row > [class*="col-"] {
+  display: flex; /* make the column a flex container so card can stretch */
+}
+
+#articles-row .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#articles-row .card-img-top {
+  height: 180px; /* fixed image height for consistent layout */
+  object-fit: cover;
+}
+
+#articles-row .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 auto; /* allow body to grow so cards are equal height */
+}
+
+/* keep the Read More button pinned to bottom when possible */
+#articles-row .card-body .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  #articles-row .card-img-top {
+    height: 140px;
+  }
 }
 
