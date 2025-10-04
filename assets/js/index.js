@@ -1,3 +1,10 @@
+// dynamically setting year in footer
+document.addEventListener('DOMContentLoaded', () => {
+    const yearSpan = document.getElementById('copyright-year');
+    if(yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
 
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
@@ -27,3 +34,5 @@ window.addEventListener("mousemove", function (details) {
     follower.style.left = `${x}px`;
   }, 50);
 });
+
+
