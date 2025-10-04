@@ -1,0 +1,26 @@
+{
+  "name": "devblog",
+  "version": "1.0.0",
+  "description": "![image](https://github.com/jineshnagori/DevBlog/blob/main/assets/img/hacktoberfest.png)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kautuk-Adarsh/DevBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kautuk-Adarsh/DevBlog/issues"
+  },
+  "homepage": "https://github.com/Kautuk-Adarsh/DevBlog#readme",
+  "devDependencies": {
+    "eslint": "^9.37.0",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.0"
+  }
+}
