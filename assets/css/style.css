@@ -119,3 +119,36 @@ a:hover {
   display: inline-block;
   border-radius: 5px;
 }
+
+/* Glassmorphism Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(33, 37, 41, 0.3); /* semi-transparent dark track */
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* glassy blur */
+  -webkit-backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent primary color */
+  border-radius: 10px;
+  border: 2px solid rgba(33, 37, 41, 0.3);
+  backdrop-filter: blur(5px); /* glassy blur on thumb too */
+  -webkit-backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* more visible on hover */
+  transform: scaleY(1.1);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.6) rgba(33, 37, 41, 0.3);
+}
+
