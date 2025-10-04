@@ -119,3 +119,35 @@ a:hover {
   display: inline-block;
   border-radius: 5px;
 }
+
+/* Scrollbar for Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* slightly thin */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-color); /* track matches dark background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); /* main accent color */
+  border-radius: 10px;
+  border: 2px solid var(--dark-color); /* adds padding effect */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--info-color); /* highlight on hover */
+  transform: scaleY(1.1); /* subtle vertical expansion */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--dark-color);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--success-color); /* optional active click color */
+}
