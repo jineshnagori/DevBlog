@@ -5,10 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
-    const yearSpan = document.getElementById('copyright-year');
-    if(yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
   // initialize pagination after DOM content loaded
   initPagination();
 });
@@ -65,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-});
 // ---------------- Pagination ----------------
 function initPagination() {
   const items = Array.from(document.querySelectorAll('.article-item'));
