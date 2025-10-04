@@ -15,18 +15,23 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
     />
+<<<<<<< HEAD
     <link
       rel="stylesheet"
-      href="assets/css/style-modular.css"
+      href="assets/style/style-modular.css"
       id="theme-sheet"
     />
+=======
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - The heaven for bloggers</title>
   </head>
 
   <body>
+<<<<<<< HEAD
     <div id="navbar-container">
       <noscript>
         <nav
@@ -46,6 +51,11 @@
         </nav>
       </noscript>
     </div>
+=======
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
     <div class="container my-5 pt-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -174,6 +184,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 
     <div id="footer-container">
       <noscript>
@@ -181,21 +192,103 @@
           <footer>
             <div class="container">
               <p class="copyright text-center">DevBlog © 2024</p>
+=======
+    <!-- Back to Top Button -->
+<button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- footer -->
+    <div class="footer-dark">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="#">Web design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Hosting</a></li>
+              </ul>
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
             </div>
           </footer>
         </div>
       </noscript>
     </div>
   </body>
+<<<<<<< HEAD
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+=======
+  <script src="assets/script/index.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    var themeSheet = document.querySelector("#theme-sheet");
+    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
+
+    function applyTheme() {
+      if (isDarkModeEnabled === "true") {
+        themeSheet.href = "assets/style/darktheme.css";
+      } else {
+        themeSheet.href = "assets/style/style.css";
+      }
+    }
+
+    applyTheme();
+
+    function theme() {
+      if (themeSheet.getAttribute("href") == "assets/style/style.css") {
+        themeSheet.href = "assets/style/darktheme.css";
+        localStorage.setItem("isDarkmodeEnabled", true);
+      } else {
+        themeSheet.href = "assets/style/style.css";
+        localStorage.setItem("isDarkmodeEnabled", false);
+      }
+    }
+  </script>
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+<script>
+fetch("templates/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-placeholder").innerHTML = data;
+  });
+</script>
+  <!-- Fontawesome Script -->
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
   <script
     src="https://kit.fontawesome.com/6d2226036d.js"
     crossorigin="anonymous"
   ></script>
-  <script src="assets/js/template-loader.js"></script>
-  <script src="assets/js/common.js"></script>
+  <script src="assets/script/template-loader.js"></script>
+  <script src="assets/script/common.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", async function () {

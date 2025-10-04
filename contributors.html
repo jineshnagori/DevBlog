@@ -15,20 +15,26 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
     />
 
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - Blog for Developers</title>
+<<<<<<< HEAD
     <link
       rel="stylesheet"
-      href="assets/css/style-modular.css"
+      href="assets/style/style-modular.css"
       id="theme-sheet"
     />
-    <link rel="stylesheet" href="assets/css/contributor-flip.css" />
-  </head>
+    <link rel="stylesheet" href="assets/style/contributor-flip.css" />
+=======
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
+    <link rel="stylesheet" href="assets/style/contributor-flip.css" />
 
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
+  </head>
   <body>
+<<<<<<< HEAD
     <div id="navbar-container">
       <noscript>
         <nav
@@ -50,6 +56,11 @@
         </nav>
       </noscript>
     </div>
+=======
+
+  <div id="navbar-placeholder"></div>
+
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
 
     <div class="container my-5 pt-5">
       <h2 class="text-center mb-5">Our Contributors</h2>
@@ -80,8 +91,8 @@
     src="https://kit.fontawesome.com/6d2226036d.js"
     crossorigin="anonymous"
   ></script>
-  <script src="assets/js/template-loader.js"></script>
-  <script src="assets/js/common.js"></script>
+  <script src="assets/script/template-loader.js"></script>
+  <script src="assets/script/common.js"></script>
 
   <script>
     document.addEventListener("DOMContentLoaded", async function () {
@@ -178,6 +189,30 @@
           contributorsHtml.join("");
       });
 
+<<<<<<< HEAD
+=======
+    function applyTheme() {
+      if (isDarkModeEnabled === "true") {
+        themeSheet.href = "assets/style/darktheme.css";
+      } else {
+        themeSheet.href = "assets/style/style.css";
+      }
+    }
+
+    applyTheme();
+
+    function theme() {
+      if (themeSheet.getAttribute("href") == "assets/style/style.css") {
+        themeSheet.href = "assets/style/darktheme.css";
+        localStorage.setItem("isDarkmodeEnabled", true);
+      } else {
+        themeSheet.href = "assets/style/style.css";
+        localStorage.setItem("isDarkmodeEnabled", false);
+      }
+    }
+
+    // Function to toggle flip on mobile devices
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
     function toggleFlip(card) {
       if (window.innerWidth <= 768) {
         card.classList.toggle("flipped");
@@ -201,4 +236,31 @@
 
     window.toggleFlip = toggleFlip;
   </script>
+<<<<<<< HEAD
 </html>
+=======
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+<script>
+fetch("templates/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-placeholder").innerHTML = data;
+  });
+</script>
+
+  <!-- Fontawesome Script -->
+  <script
+    src="https://kit.fontawesome.com/6d2226036d.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
+>>>>>>> 9a6e090c8a2b17515b58a6a3f5068dda1a4809f9
