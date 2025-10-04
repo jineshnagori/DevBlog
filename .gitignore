@@ -1,0 +1,37 @@
+
+# Dependency directory
+/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+.eslintcache
+.stylelintcache
+
+
+# -----------------------------------------------------------------------------
+# OS/System Files
+# -----------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------------------------------------------------------
+# IDE/Editor Files
+# -----------------------------------------------------------------------------
+# VS Code
+.vscode/
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Vim/NeoVim
+*~
+*.swp
+.netrwhist
