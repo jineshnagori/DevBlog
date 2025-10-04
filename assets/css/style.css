@@ -169,3 +169,37 @@ a:hover {
   scrollbar-color: rgba(255, 255, 255, 0.6) rgba(33, 37, 41, 0.3);
 }
 
+/* Ensure article grid cards are equal height and images align */
+#articles-row > [class*="col-"] {
+  display: flex; /* make the column a flex container so card can stretch */
+}
+
+#articles-row .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#articles-row .card-img-top {
+  height: 180px; /* fixed image height for consistent layout */
+  object-fit: cover;
+}
+
+#articles-row .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 auto; /* allow body to grow so cards are equal height */
+}
+
+/* keep the Read More button pinned to bottom when possible */
+#articles-row .card-body .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  #articles-row .card-img-top {
+    height: 140px;
+  }
+}
+
