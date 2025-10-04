@@ -1,0 +1,55 @@
+/* Contributor Card Flip Animation */
+.contributor-card {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 320px;
+  position: relative;
+  background: none;
+  border: none;
+}
+
+.contributor-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.contributor-card.flipped .contributor-card-inner,
+.contributor-card:hover .contributor-card-inner {
+  transform: rotateY(180deg);
+}
+
+.contributor-card-front,
+.contributor-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contributor-card-front {
+  z-index: 2;
+}
+
+.contributor-card-back {
+  transform: rotateY(180deg);
+  background: var(--light-color);
+  color: var(--dark-color);
+  padding: 1.5rem;
+  z-index: 1;
+}
+
+.contributor-card-back a {
+  color: var(--primary-color);
+  font-weight: bold;
+  text-decoration: underline;
+}

@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - Blog for Developers</title>
     <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
+    <link rel="stylesheet" href="assets/css/darktheme.css" id="dark-theme" disabled />
 </head>
 
 <body>
@@ -70,7 +71,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mt-3 mt-lg-0 flex-row align-items-center justify-content-center">
-                    <button id="themeBtn" onclick="theme()" class="btn-theme">
+                   <button id="themeBtn" onclick="theme()" class="btn-theme">
                         <i class="fas fa-sun" id="sun"></i>
                         <i class="fas fa-moon" id="moon"></i>
                     </button>
@@ -95,8 +96,8 @@
 
     <div class="container my-5">
         <h2 class="text-center mb-5 featured">Featured Articles</h2>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
+        <div class="row g-4" id="articles-row">
+            <div class="col-lg-3 col-md-6 article-item">
                 <div class="card h-100 shadow-sm article-card">
                     <img src="assets/img/1.png" class="card-img-top" alt="articles" />
                     <div class="card-body d-flex flex-column">
@@ -107,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 article-item">
                 <div class="card h-100 shadow-sm article-card">
                     <img src="assets/img/2.png" class="card-img-top" alt="articles" />
                     <div class="card-body d-flex flex-column">
@@ -118,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 article-item">
                 <div class="card h-100 shadow-sm article-card">
                     <img src="assets/img/1.png" class="card-img-top" alt="articles" />
                     <div class="card-body d-flex flex-column">
@@ -129,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 article-item">
                 <div class="card h-100 shadow-sm article-card">
                     <img src="assets/img/11.svg" class="card-img-top" alt="articles" />
                     <div class="card-body d-flex flex-column">
@@ -140,6 +141,49 @@
                     </div>
                 </div>
             </div>
+            <!-- duplicate items for pagination testing -->
+            <div class="col-lg-3 col-md-6 article-item">
+                <div class="card h-100 shadow-sm article-card">
+                    <img src="assets/img/css.png" class="card-img-top" alt="articles" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><a href="blogpost.html">Quick CSS Tricks You Should Know</a></h5>
+                        <p class="card-text text-muted">Frontend Tips</p>
+                        <p class="card-text"><small class="text-muted">12 February | 4 min read</small></p>
+                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 article-item">
+                <div class="card h-100 shadow-sm article-card">
+                    <img src="assets/img/2.png" class="card-img-top" alt="articles" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><a href="blogpost.html">Importance of DSA</a></h5>
+                        <p class="card-text text-muted">Linux-King 123</p>
+                        <p class="card-text"><small class="text-muted">08 January | 5 min read</small></p>
+                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 article-item">
+                <div class="card h-100 shadow-sm article-card">
+                    <img src="assets/img/1.png" class="card-img-top" alt="articles" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"><a href="blogpost.html">Coding v/s Programming</a></h5>
+                        <p class="card-text text-muted">WebD68</p>
+                        <p class="card-text"><small class="text-muted">10 January | 10 min read</small></p>
+                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
+                    </div>
+                </div>
+            </div>
+        <!-- Extra Articles for Pagination Testing -->
+<div class="col-lg-3 col-md-6 article-item">
+    <div class="card h-100 shadow-sm article-card">
+        <img src="assets/img/3.png" class="card-img-top" alt="articles" />
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title"><a href="blogpost.html">Mastering Git in 2025</a></h5>
+            <p class="card-text text-muted">CodeWizard</p>
+            <p class="card-text"><small class="text-muted">15 March | 7 min read</small></p>
+            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
         </div>
     </div>
     <!-- 🌟 Back to Top Button -->
@@ -214,6 +258,16 @@
             localStorage.setItem("isDarkmodeEnabled", false);
         }
     }
+</script>
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 </script>
 <!-- Fontawesome Script -->
 <script src="https://kit.fontawesome.com/6d2226036d.js" crossorigin="anonymous"></script>
