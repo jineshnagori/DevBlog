@@ -10,17 +10,17 @@
     />
     <meta name="keywords" content="DevBlog, Blogs for Developer" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/style/bootstrap.min.css"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
     />
 
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - Blog for Developers</title>
-    <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
   </head>
 
   <body>
@@ -182,7 +182,7 @@
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/script/bootstrap.bundle.min.js"></script>
   <script>
     var themeSheet = document.querySelector('#theme-sheet')
     var isDarkModeEnabled = window.themeStorage || 'false'
@@ -194,20 +194,20 @@
 
     function applyTheme() {
       if (window.themeStorage === 'true') {
-        themeSheet.href = 'assets/css/darktheme.css'
+        themeSheet.href = 'assets/style/darktheme.css'
       } else {
-        themeSheet.href = 'assets/css/style.css'
+        themeSheet.href = 'assets/style/style.css'
       }
     }
 
     applyTheme()
 
     function theme() {
-      if (themeSheet.getAttribute('href') == 'assets/css/style.css') {
-        themeSheet.href = 'assets/css/darktheme.css'
+      if (themeSheet.getAttribute('href') == 'assets/style/style.css') {
+        themeSheet.href = 'assets/style/darktheme.css'
         window.themeStorage = 'true'
       } else {
-        themeSheet.href = 'assets/css/style.css'
+        themeSheet.href = 'assets/style/style.css'
         window.themeStorage = 'false'
       }
     }
