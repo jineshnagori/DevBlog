@@ -1,0 +1,8 @@
+/* DevBlog Modular CSS - Import all modules */
+@import url("./modules/_variables.css");
+@import url("./modules/_base.css");
+@import url("./modules/_navbar.css");
+@import url("./modules/_footer.css");
+@import url("./modules/_components.css");
+@import url("./modules/_layout.css");
+@import url("./modules/_utilities.css");

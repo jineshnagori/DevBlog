@@ -1,0 +1,29 @@
+/* Footer */
+.footer-dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 40px 0;
+}
+
+.footer-dark h3 {
+  color: #fff;
+}
+
+.footer-dark a {
+  color: var(--light-color);
+  opacity: 0.8;
+}
+
+.footer-dark a:hover {
+  opacity: 1;
+}
+
+.footer-dark .social a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+.footer-dark .copyright {
+  margin-top: 20px;
+  opacity: 0.7;
+}

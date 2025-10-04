@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DevBlog is the website dedicated only for true developers.">
-    <meta name="keywords" content="DevBlog, Blogs for Developer">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DevBlog is the website dedicated only for true developers."
+    />
+    <meta name="keywords" content="DevBlog, Blogs for Developer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/style-modular.css"
+      id="theme-sheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - NOT FOUND</title>
-</head>
+  </head>
 
-<body>
-    <section class="page_404">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 ">
-                    <div class="col-sm-10 mx-auto text-center">
-                        <div class="four_zero_four_bg">
-                            <h1 class="text-center ">404</h1>
-                        </div>
-                        <div class="contant_box_404">
-                            <h3 class="h2">
-                                Look like you're lost
-                            </h3>
-                            <p>The page you are looking for is not available!</p>
-                            <a href="index.html" class="link_404">Go to Home</a>
-                        </div>
-                    </div>
-                </div>
+  <body>
+    <div id="navbar-container">
+      <noscript>
+        <nav
+          class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
+        >
+          <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+              <span class="ml-3 font-weight-bold font2">DevBlog</span>
+            </a>
+            <div class="navbar-nav mx-auto">
+              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contributors.html">Contributors</a>
             </div>
-        </div>
-    </section>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+          </div>
+        </nav>
+      </noscript>
+    </div>
 
+    <section class="page_404">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-10 mx-auto text-center">
+              <div class="four_zero_four_bg">
+                <h1 class="text-center">404</h1>
+              </div>
+              <div class="contant_box_404">
+                <h3 class="h2">Look like you're lost</h3>
+                <p>The page you are looking for is not available!</p>
+                <a href="index.html" class="link_404">Go to Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container">
+      <noscript>
+        <div class="footer-dark">
+          <footer>
+            <div class="container">
+              <p class="copyright text-center">DevBlog © 2024</p>
+            </div>
+          </footer>
+        </div>
+      </noscript>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/6d2226036d.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assets/js/template-loader.js"></script>
+  <script src="assets/js/common.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", async function () {
+      await templateLoader.loadMultipleTemplates([
+        { path: "templates/navbar.html", target: "#navbar-container" },
+        { path: "templates/footer.html", target: "#footer-container" },
+      ]);
+      DevBlog.init();
+    });
+  </script>
 </html>

@@ -1,51 +1,68 @@
-// dynamically setting year in footer
-document.addEventListener('DOMContentLoaded', () => {
-    const yearSpan = document.getElementById('copyright-year');
-    if(yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-  // initialize pagination after DOM content loaded
+// Index page specific functionality integrated with DevBlog common module
+document.addEventListener("DOMContentLoaded", () => {
+  // Set copyright year (moved from common)
+  const yearSpan = document.getElementById("copyright-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Initialize pagination after DOM content loaded
   initPagination();
+
+  // Initialize login form if DevBlog module is available
+  if (typeof DevBlog !== "undefined") {
+    DevBlog.initLoginForm();
+  }
 });
 
+// Login/Signup form functionality (preserved from original)
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
 const signupBtn = document.querySelector("label.signup");
 const signupLink = document.querySelector("form .signup-link a");
-signupBtn.onclick = (() => {
-  loginForm.style.marginLeft = "-50%";
-  loginText.style.marginLeft = "-50%";
-});
-loginBtn.onclick = (() => {
-  loginForm.style.marginLeft = "0%";
-  loginText.style.marginLeft = "0%";
-});
-signupLink.onclick = (() => {
-  signupBtn.click();
-  return false;
-});
 
+if (signupBtn && loginForm && loginText) {
+  signupBtn.onclick = () => {
+    loginForm.style.marginLeft = "-50%";
+    loginText.style.marginLeft = "-50%";
+  };
+}
+
+if (loginBtn && loginForm && loginText) {
+  loginBtn.onclick = () => {
+    loginForm.style.marginLeft = "0%";
+    loginText.style.marginLeft = "0%";
+  };
+}
+
+if (signupLink && signupBtn) {
+  signupLink.onclick = () => {
+    signupBtn.click();
+    return false;
+  };
+}
+
+// Mouse follower effect (preserved from original)
 let follower = document.getElementById("circle");
-
-window.addEventListener("mousemove", function (details) {
-  let y = details.clientY;
-  let x = details.clientX;
-  setTimeout(function () {
-    follower.style.top = `${y}px`;
-    follower.style.left = `${x}px`;
-  }, 50);
-});
-
+if (follower) {
+  window.addEventListener("mousemove", function (details) {
+    let y = details.clientY;
+    let x = details.clientX;
+    setTimeout(function () {
+      follower.style.top = `${y}px`;
+      follower.style.left = `${x}px`;
+    }, 50);
+  });
+}
 
 // ---------------- Pagination ----------------
 function initPagination() {
-  const items = Array.from(document.querySelectorAll('.article-item'));
+  const items = Array.from(document.querySelectorAll(".article-item"));
   if (!items || items.length === 0) return;
 
-
   const urlParams = new URLSearchParams(window.location.search);
-  let currentPage = parseInt(urlParams.get('page') || '1', 10);
+  let currentPage = parseInt(urlParams.get("page") || "1", 10);
   if (isNaN(currentPage) || currentPage < 1) currentPage = 1;
 
   function getPerPage(page) {
@@ -71,35 +88,41 @@ function initPagination() {
     const endIndex = startIndex + perPage;
 
     items.forEach((el, idx) => {
-      if (idx >= startIndex && idx < endIndex) el.style.display = '';
-      else el.style.display = 'none';
+      if (idx >= startIndex && idx < endIndex) el.style.display = "";
+      else el.style.display = "none";
     });
 
     // hide hero if not first page
-    const hero = document.querySelector('.hero-section');
-    if (hero) hero.style.display = page === 1 ? '' : 'none';
+    const hero = document.querySelector(".hero-section");
+    if (hero) hero.style.display = page === 1 ? "" : "none";
   }
 
   function renderPaginationControls(page) {
-    const container = document.getElementById('pagination');
+    const container = document.getElementById("pagination");
     if (!container) return;
     // hide pagination if only one page
     if (totalPages <= 1) {
-      container.style.display = 'none';
+      container.style.display = "none";
       return;
     } else {
-      container.style.display = '';
+      container.style.display = "";
     }
-    container.innerHTML = '';
+    container.innerHTML = "";
 
-    function createPageItem(label, targetPage, disabled = false, active = false) {
-      const li = document.createElement('li');
-      li.className = 'page-item' + (disabled ? ' disabled' : '') + (active ? ' active' : '');
-      const a = document.createElement('a');
-      a.className = 'page-link';
-      a.href = '#';
+    function createPageItem(
+      label,
+      targetPage,
+      disabled = false,
+      active = false
+    ) {
+      const li = document.createElement("li");
+      li.className =
+        "page-item" + (disabled ? " disabled" : "") + (active ? " active" : "");
+      const a = document.createElement("a");
+      a.className = "page-link";
+      a.href = "#";
       a.textContent = label;
-      a.addEventListener('click', (e) => {
+      a.addEventListener("click", (e) => {
         e.preventDefault();
         if (disabled || targetPage === page) return;
         goToPage(targetPage);
@@ -109,7 +132,9 @@ function initPagination() {
     }
 
     // Prev
-    container.appendChild(createPageItem('«', Math.max(1, page - 1), page === 1));
+    container.appendChild(
+      createPageItem("«", Math.max(1, page - 1), page === 1)
+    );
 
     // Smart window for page numbers
     const maxWindow = 5;
@@ -122,11 +147,11 @@ function initPagination() {
     if (startPage > 1) {
       container.appendChild(createPageItem(1, 1, false, 1 === page));
       if (startPage > 2) {
-        const dots = document.createElement('li');
-        dots.className = 'page-item disabled';
-        const span = document.createElement('span');
-        span.className = 'page-link';
-        span.textContent = '...';
+        const dots = document.createElement("li");
+        dots.className = "page-item disabled";
+        const span = document.createElement("span");
+        span.className = "page-link";
+        span.textContent = "...";
         dots.appendChild(span);
         container.appendChild(dots);
       }
@@ -138,19 +163,23 @@ function initPagination() {
 
     if (endPage < totalPages) {
       if (endPage < totalPages - 1) {
-        const dots = document.createElement('li');
-        dots.className = 'page-item disabled';
-        const span = document.createElement('span');
-        span.className = 'page-link';
-        span.textContent = '...';
+        const dots = document.createElement("li");
+        dots.className = "page-item disabled";
+        const span = document.createElement("span");
+        span.className = "page-link";
+        span.textContent = "...";
         dots.appendChild(span);
         container.appendChild(dots);
       }
-      container.appendChild(createPageItem(totalPages, totalPages, false, totalPages === page));
+      container.appendChild(
+        createPageItem(totalPages, totalPages, false, totalPages === page)
+      );
     }
 
     // Next
-    container.appendChild(createPageItem('»', Math.min(totalPages, page + 1), page === totalPages));
+    container.appendChild(
+      createPageItem("»", Math.min(totalPages, page + 1), page === totalPages)
+    );
   }
 
   function goToPage(page) {
@@ -159,12 +188,12 @@ function initPagination() {
     renderPaginationControls(page);
 
     const params = new URLSearchParams(window.location.search);
-    params.set('page', page);
-    const newUrl = window.location.pathname + '?' + params.toString();
-    window.history.replaceState({}, '', newUrl);
+    params.set("page", page);
+    const newUrl = window.location.pathname + "?" + params.toString();
+    window.history.replaceState({}, "", newUrl);
 
-    const articlesRow = document.getElementById('articles-row');
-    if (articlesRow) articlesRow.scrollIntoView({ behavior: 'smooth' });
+    const articlesRow = document.getElementById("articles-row");
+    if (articlesRow) articlesRow.scrollIntoView({ behavior: "smooth" });
   }
 
   // initial render
@@ -174,15 +203,12 @@ function initPagination() {
 
 // When coming back via browser history (bfcache), pageshow fires without DOMContentLoaded.
 // Re-run pagination to ensure the correct page and layout are applied.
-window.addEventListener('pageshow', (event) => {
+window.addEventListener("pageshow", (event) => {
   try {
     // initPagination is idempotent enough to be called again; it will recalc and render.
     initPagination();
   } catch (err) {
     // ignore — safe fallback
-    console.warn('Pagination reinit failed on pageshow:', err);
+    console.warn("Pagination reinit failed on pageshow:", err);
   }
 });
-
-
-
