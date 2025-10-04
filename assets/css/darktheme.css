@@ -12,7 +12,30 @@
   --font-family-sans-serif: "Roboto", sans-serif;
   --font1: "Baloo Bhaina 2", cursive;
 }
+.navbar-frosted {
+    /* The core blur effect remains the same */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 
+    /* 1. A dark, semi-transparent background */
+    background: rgba(20, 20, 20, 0.4) !important;
+    
+    /* 2. A light, subtle border for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    /* 3. A subtle shadow */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-frosted .nav-link, 
+.navbar-frosted .navbar-brand {
+    color: #f0f0f0 !important; 
+}
+
+.navbar-frosted .nav-link:hover, 
+.navbar-frosted .navbar-brand:hover {
+    color: #ffffff !important;
+}
 body {
   background-color: #121212;
   color: var(--light-color);
