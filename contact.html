@@ -1,170 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="DevBlog is the website dedicated only for true developers."
-		/>
-		<meta name="keywords" content="DevBlog, Blogs for Developer" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="DevBlog is the website dedicated only for true developers."
+    />
+    <meta name="keywords" content="DevBlog, Blogs for Developer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
+    />
 
-		<link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
-		<title>DevBlog - Blog for Developers</title>
-		<link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
-	</head>
-	<script>
-		fetch("templates/footer.html")
-			.then((response) => response.text())
-			.then((data) => {
-				document.getElementById("footer-placeholder").innerHTML = data;
-			});
-	</script>
+    <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
+    <title>DevBlog - Blog for Developers</title>
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
+  </head>
 
-	<body>
-		<!-- Navbar -->
-		<nav
-			class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
-		>
-			<div class="container">
-				<a class="navbar-brand d-flex align-items-center" href="index.html">
-					<span class="ml-3 font-weight-bold font2">DevBlog</span>
-				</a>
-				<button
-					class="navbar-toggler navbar-toggler-right border-1"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbar4"
-					aria-controls="navbarSupportedContent"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
 
-				<div class="collapse navbar-collapse" id="navbar4">
-					<ul class="navbar-nav mx-auto pl-lg-4">
-						<li class="nav-item px-lg-2">
-							<a class="nav-link" href="index.html"
-								><span class="d-inline-block d-lg-none icon-width pe-1"
-									><i class="fa-solid fa-house"></i></span
-								>Home</a
-							>
-						</li>
-						<li class="nav-item px-lg-2">
-							<a class="nav-link" href="about.html"
-								><span class="d-inline-block d-lg-none icon-width pe-1"
-									><i class="fa-solid fa-user"></i></span
-								>About</a
-							>
-						</li>
+    <div class="container my-5 pt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow-sm">
+            <div class="card-body p-5">
+              <h2 class="card-title text-center mb-4">Contact Us</h2>
+              <form id="contact-form" action="" method="post">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="website" class="form-label">Website</label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    id="website"
+                    placeholder="Your website URL"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Type your message here..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-						<li class="nav-item px-lg-2 active">
-							<a class="nav-link" href="contact.html"
-								><span class="d-inline-block d-lg-none icon-width pe-1"
-									><i class="fa-solid fa-envelope"></i></span
-								>Contact</a
-							>
-						</li>
-
-						<li class="nav-item px-lg-2">
-							<a class="nav-link" href="contributors.html"
-								><span class="d-inline-block d-lg-none icon-width pe-1"
-									><i class="fa-solid fa-user-group"></i></span
-								>Contributors</a
-							>
-						</li>
-					</ul>
-					<ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-						<button id="themeBtn" onclick="theme()" class="btn-theme">
-							<i class="fas fa-sun" id="sun"></i>
-							<i class="fas fa-moon" id="moon"></i>
-						</button>
-						<a class="mx-3 my-1 btn btn-primary" href="AddBlog.html"
-							>Add Blog</a
-						>
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-		<div class="container my-5 pt-5">
-			<div class="row justify-content-center">
-				<div class="col-md-8">
-					<div class="card shadow-sm">
-						<div class="card-body p-5">
-							<h2 class="card-title text-center mb-4">Contact Us</h2>
-							<form id="contact-form" action="" method="post">
-								<div class="mb-3">
-									<label for="name" class="form-label">Your Name</label>
-									<input
-										type="text"
-										class="form-control"
-										id="name"
-										placeholder="Enter your name"
-										required
-									/>
-								</div>
-								<div class="mb-3">
-									<label for="email" class="form-label">Email Address</label>
-									<input
-										type="email"
-										class="form-control"
-										id="email"
-										placeholder="Enter your email"
-										required
-									/>
-								</div>
-								<div class="mb-3">
-									<label for="phone" class="form-label">Phone Number</label>
-									<input
-										type="tel"
-										class="form-control"
-										id="phone"
-										placeholder="Enter your phone number"
-									/>
-								</div>
-								<div class="mb-3">
-									<label for="website" class="form-label">Website</label>
-									<input
-										type="url"
-										class="form-control"
-										id="website"
-										placeholder="Your website URL"
-									/>
-								</div>
-								<div class="mb-3">
-									<label for="message" class="form-label">Message</label>
-									<textarea
-										class="form-control"
-										id="message"
-										rows="5"
-										placeholder="Type your message here..."
-										required
-									></textarea>
-								</div>
-								<div class="d-grid">
-									<button type="submit" class="btn btn-primary btn-lg">
-										Submit
-									</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- footer -->
+    <!-- Confirmation Modal -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">
+              Confirm Submission
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to submit this form?</p>
+            <p class="text-muted small mb-0">
+              Please review your information before confirming.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmSubmit">
+              Confirm Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 		<div id="footer-placeholder"></div>
 	</body>
@@ -174,30 +145,124 @@
 		var themeSheet = document.querySelector("#theme-sheet");
 		var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
 
-		function applyTheme() {
-			if (isDarkModeEnabled === "true") {
-				themeSheet.href = "assets/css/darktheme.css";
-			} else {
-				themeSheet.href = "assets/css/style.css";
-			}
-		}
+    <div class="footer-dark">
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>Services</h3>
+              <ul>
+                <li><a href="#">Web design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">Hosting</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Content</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 item">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </div>
+            <div class="col-md-6 item text">
+              <h3>DevBlog</h3>
+              <p>
+                DevBlog is a Blogpost Platform where the Users can Upload their
+                Articles and Literatures on the Web and the maintainers of the
+                Website can approve of them and then Publish it onto the Blog.
+              </p>
+            </div>
+            <div class="col item social">
+              <a href="#"><i class="fab fa-facebook"></i></a
+              ><a href="#"><i class="fab fa-twitter"></i></a
+              ><a href="#"><i class="fab fa-snapchat"></i></a
+              ><a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <p class="copyright">DevBlog © 2025</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var themeSheet = document.querySelector('#theme-sheet')
+    var isDarkModeEnabled = window.themeStorage || 'false'
 
-		applyTheme();
+    // Initialize theme storage variable
+    if (!window.themeStorage) {
+      window.themeStorage = 'false'
+    }
 
-		function theme() {
-			if (themeSheet.getAttribute("href") == "assets/css/style.css") {
-				themeSheet.href = "assets/css/darktheme.css";
-				localStorage.setItem("isDarkmodeEnabled", true);
-			} else {
-				themeSheet.href = "assets/css/style.css";
-				localStorage.setItem("isDarkmodeEnabled", false);
-			}
-		}
-	</script>
+    function applyTheme() {
+      if (window.themeStorage === 'true') {
+        themeSheet.href = 'assets/style/darktheme.css'
+      } else {
+        themeSheet.href = 'assets/style/style.css'
+      }
+    }
 
-	<!-- Fontawesome Script -->
-	<script
-		src="https://kit.fontawesome.com/6d2226036d.js"
-		crossorigin="anonymous"
-	></script>
+    applyTheme()
+
+    function theme() {
+      if (themeSheet.getAttribute('href') == 'assets/style/style.css') {
+        themeSheet.href = 'assets/style/darktheme.css'
+        window.themeStorage = 'true'
+      } else {
+        themeSheet.href = 'assets/style/style.css'
+        window.themeStorage = 'false'
+      }
+    }
+
+    // Form submission with confirmation modal
+    var contactForm = document.getElementById('contact-form')
+    var confirmationModal = new bootstrap.Modal(
+      document.getElementById('confirmationModal')
+    )
+    var confirmSubmitBtn = document.getElementById('confirmSubmit')
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      // Show confirmation modal
+      confirmationModal.show()
+    })
+
+    confirmSubmitBtn.addEventListener('click', function () {
+      // Hide modal
+      confirmationModal.hide()
+
+      // Actually submit the form
+      // In a real application, you would send the data via AJAX here
+      alert('Form submitted successfully!')
+      contactForm.reset()
+    })
+  </script>
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+<script>
+fetch("templates/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-placeholder").innerHTML = data;
+  });
+</script>
+
+  <!-- Fontawesome Script -->
+  <script
+    src="https://kit.fontawesome.com/6d2226036d.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

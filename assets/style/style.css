@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Baloo+Bhaina+2:wght@500&display=swap");
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --font-family-sans-serif: "Roboto", sans-serif;
+  --font1: "Baloo Bhaina 2", cursive;
+}
+.navbar-frosted {
+    /* Remove the default bootstrap background */
+    background: transparent !important;
+
+    /* Make the navbar float slightly from the top */
+    top: 16px; 
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 95%;
+    border-radius: 12px;
+
+    /* The Frosted Glass Effect */
+    background: rgba(255, 255, 255, 0.25) !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.navbar-frosted.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+  background: rgba(255, 255, 255, 1) !important; /* solid white */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar-frosted {
+  transition: all 0.4s ease-in-out;
+}
+body {
+  font-family: var(--font-family-sans-serif);
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: var(--dark-color);
+  padding-top: 70px; /* For fixed navbar */
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0a58ca;
+}
+
+.font1 {
+  font-family: var(--font1);
+}
+
+.btn-theme {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--dark-color);
+}
+
+.btn-theme #moon {
+    display: none;
+}
+
+/* Navbar */
+.navbar {
+  transition: all 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 120px 0;
+    background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('../img/hero-blog.jpg') no-repeat center center/cover;
+}
+
+/* Article Card */
+.article-card {
+    transition: transform 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Footer */
+.footer-dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 40px 0;
+}
+
+.footer-dark h3 {
+  color: #fff;
+}
+
+.footer-dark a {
+  color: var(--light-color);
+  opacity: 0.8;
+}
+
+.footer-dark a:hover {
+  opacity: 1;
+}
+
+.footer-dark .social a {
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+.footer-dark .copyright {
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+/* 404 Page */
+.page_404{
+  padding: 40px 0;
+}
+
+.four_zero_four_bg {
+  background-image: url("https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif");
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff!important;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  margin: 20px 0;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* Glassmorphism Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(33 37 41 / 30%); /* semi-transparent dark track */
+  border-radius: 10px; /* glassy blur */
+  backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / 60%); /* semi-transparent primary color */
+  border-radius: 10px;
+  border: 2px solid rgb(33 37 41 / 30%); /* glassy blur on thumb too */
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 80%); /* more visible on hover */
+  transform: scaleY(1.1);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 60%) rgb(33 37 41 / 30%);
+}
+
+/* Ensure article grid cards are equal height and images align */
+#articles-row > [class*="col-"] {
+  display: flex; /* make the column a flex container so card can stretch */
+}
+
+#articles-row .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#articles-row .card-img-top {
+  height: 180px; /* fixed image height for consistent layout */
+  object-fit: cover;
+}
+
+#articles-row .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 auto; /* allow body to grow so cards are equal height */
+}
+
+/* keep the Read More button pinned to bottom when possible */
+#articles-row .card-body .btn {
+  margin-top: auto;
+}
+
+@media (max-width: 767px) {
+  #articles-row .card-img-top {
+    height: 140px;
+  }
+}
+
+/* 🌟 Back to Top Button - Final Fixed Version */
+.back-to-top {
+  position: fixed;
+  bottom: 100px; /* moved up so it doesn’t overlap chatbot */
+  right: 40px;
+  opacity: 0;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color, #0d6efd);
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 99999; /* ensures it’s above chatbot and footer */
+  transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background-color: #0a58ca;
+  transform: translateY(-3px);
+}
+/* Blog Post Page */
+.blog-container {
+    max-width: 800px;        /* Keep content centered and readable */
+    margin: auto;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.blog-container h1,
+.blog-container h2,
+.blog-container h3,
+.blog-container h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.blog-container p {
+    margin-bottom: 1rem;
+}
+
+.blog-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+.blog-container pre,
+.blog-container code {
+    overflow-x: auto;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .blog-container h1 {
+        font-size: 2rem;
+    }
+
+    .blog-container h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+    .blog-container {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .blog-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-container h2 {
+        font-size: 1.25rem;
+    }
+
+    .blog-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .blog-container p {
+        margin-bottom: 0.8rem;
+    }
+}

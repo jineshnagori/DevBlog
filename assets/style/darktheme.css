@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Baloo+Bhaina+2:wght@500&display=swap");
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --font-family-sans-serif: "Roboto", sans-serif;
+  --font1: "Baloo Bhaina 2", cursive;
+}
+.navbar-frosted {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: rgba(20, 20, 20, 0.5) !important; /* darker and semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-frosted .nav-link, 
+.navbar-frosted .navbar-brand {
+    color: var(--light-color) !important; 
+}
+
+.navbar-frosted .nav-link:hover, 
+.navbar-frosted .navbar-brand:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #1f1f1f 100%);
+  color: var(--light-color);
+  transition: background 0.4s, color 0.4s;
+}
+
+.bg-light {
+    background-color: var(--dark-color) !important;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--light-color) !important;
+}
+
+/* Dark theme for contributor flip cards */
+.contributor-card-front,
+.contributor-card-back {
+  background: #1e1e1e !important;
+  color: var(--light-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contributor-card-back {
+  background: #2a2a2a !important;
+}
+
+.btn-theme {
+  color: var(--light-color);
+}
+
+.btn-theme #sun {
+    display: none;
+}
+
+.btn-theme #moon {
+    display: inline-block;
+}
+
+.card {
+  background: rgba(25, 25, 25, 0.6); /* darker glass tint */
+  backdrop-filter: blur(12px);       /* frosted blur */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.card-title a, .card-text {
+    color: var(--light-color) !important;
+}
+
+.footer-dark {
+  background-color: #000;
+}
+
+/* Glassmorphism Scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(33 37 41 / 30%); /* semi-transparent dark track */
+  border-radius: 10px; /* glassy blur */
+  backdrop-filter: blur(5px);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255 255 255 / 60%); /* semi-transparent primary color */
+  border-radius: 10px;
+  border: 2px solid rgb(33 37 41 / 30%); /* glassy blur on thumb too */
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(255 255 255 / 80%); /* more visible on hover */
+  transform: scaleY(1.1);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / 60%) rgb(33 37 41 / 30%);
+}
