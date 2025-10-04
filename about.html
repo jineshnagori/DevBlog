@@ -1,255 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevBlog | About</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
-    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DevBlog | About</title>
+		<link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
+		<link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+		/>
+		<link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
+	</head>
+	<script>
+		fetch("templates/footer.html")
+			.then((response) => response.text())
+			.then((data) => {
+				document.getElementById("footer-placeholder").innerHTML = data;
+			});
+	</script>
 
-  <body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-      var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/634ce581b0d6371309c9dea8/1gfi6112r";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-    </script>
-    <!--End of Tawk.to Script-->
+	<body>
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API = Tawk_API || {},
+				Tawk_LoadStart = new Date();
+			(function () {
+				var s1 = document.createElement("script"),
+					s0 = document.getElementsByTagName("script")[0];
+				s1.async = true;
+				s1.src = "https://embed.tawk.to/634ce581b0d6371309c9dea8/1gfi6112r";
+				s1.charset = "UTF-8";
+				s1.setAttribute("crossorigin", "*");
+				s0.parentNode.insertBefore(s1, s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
 
-    <nav
-      class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
-    >
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <span class="ml-3 font-weight-bold font2">DevBlog</span>
-        </a>
-        <button
-          class="navbar-toggler navbar-toggler-right border-1"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar4"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+		<nav
+			class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
+		>
+			<div class="container">
+				<a class="navbar-brand d-flex align-items-center" href="index.html">
+					<span class="ml-3 font-weight-bold font2">DevBlog</span>
+				</a>
+				<button
+					class="navbar-toggler navbar-toggler-right border-1"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar4"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-        <div class="collapse navbar-collapse" id="navbar4">
-          <ul class="navbar-nav mx-auto pl-lg-4">
-            <li class="nav-item px-lg-2">
-              <a class="nav-link" href="index.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-house"></i></span
-                >Home</a
-              >
-            </li>
-            <li class="nav-item px-lg-2 active">
-              <a class="nav-link" href="about.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-user"></i></span
-                >About</a
-              >
-            </li>
+				<div class="collapse navbar-collapse" id="navbar4">
+					<ul class="navbar-nav mx-auto pl-lg-4">
+						<li class="nav-item px-lg-2">
+							<a class="nav-link" href="index.html"
+								><span class="d-inline-block d-lg-none icon-width pe-1"
+									><i class="fa-solid fa-house"></i></span
+								>Home</a
+							>
+						</li>
+						<li class="nav-item px-lg-2 active">
+							<a class="nav-link" href="about.html"
+								><span class="d-inline-block d-lg-none icon-width pe-1"
+									><i class="fa-solid fa-user"></i></span
+								>About</a
+							>
+						</li>
 
-            <li class="nav-item px-lg-2">
-              <a class="nav-link" href="contact.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-envelope"></i></span
-                >Contact</a
-              >
-            </li>
+						<li class="nav-item px-lg-2">
+							<a class="nav-link" href="contact.html"
+								><span class="d-inline-block d-lg-none icon-width pe-1"
+									><i class="fa-solid fa-envelope"></i></span
+								>Contact</a
+							>
+						</li>
 
-            <li class="nav-item px-lg-2">
-              <a class="nav-link" href="contributors.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-user-group"></i></span
-                >Contributors</a
-              >
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-            <button id="themeBtn" onclick="theme()" class="btn-theme">
-                <i class="fas fa-sun" id="sun"></i>
-                <i class="fas fa-moon" id="moon"></i>
-            </button>
+						<li class="nav-item px-lg-2">
+							<a class="nav-link" href="contributors.html"
+								><span class="d-inline-block d-lg-none icon-width pe-1"
+									><i class="fa-solid fa-user-group"></i></span
+								>Contributors</a
+							>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+						<button id="themeBtn" onclick="theme()" class="btn-theme">
+							<i class="fas fa-sun" id="sun"></i>
+							<i class="fas fa-moon" id="moon"></i>
+						</button>
 
-            <a class="mx-3 my-1 btn btn-primary" href="AddBlog.html"
-              >Add Blog</a
-            >
-          </ul>
-        </div>
-      </div>
-    </nav>
+						<a class="mx-3 my-1 btn btn-primary" href="AddBlog.html"
+							>Add Blog</a
+						>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-    <div class="container my-5 pt-5">
-      <section class="about-hero text-center">
-        <h1 class="display-4"><strong>About DevBlog</strong></h1>
-        <p class="lead col-md-8 mx-auto">At DevBlog, we're more than just developers; we're passionate creators, problem solvers, and innovators, here to share our insights, experiences, and knowledge with you.</p>
-        <a href="#learn-more" class="btn btn-primary btn-lg">Learn More</a>
-      </section>
+		<div class="container my-5 pt-5">
+			<section class="about-hero text-center">
+				<h1 class="display-4"><strong>About DevBlog</strong></h1>
+				<p class="lead col-md-8 mx-auto">
+					At DevBlog, we're more than just developers; we're passionate
+					creators, problem solvers, and innovators, here to share our insights,
+					experiences, and knowledge with you.
+				</p>
+				<a href="#learn-more" class="btn btn-primary btn-lg">Learn More</a>
+			</section>
 
-      <section class="my-5" id="learn-more">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <img class="img-fluid rounded-3 shadow-lg" src="./assets/img/about.svg" alt="about-img">
-          </div>
-          <div class="col-md-6">
-            <h2>Our Mission</h2>
-            <p>Our mission is to be your go-to resource for everything related to software development and technology. Whether you're a coding novice or an experienced developer looking to stay on the cutting edge, we've got something for you. Explore our deep dives into programming languages and frameworks and stay updated with the latest industry trends.</p>
-            <p><strong>Welcome to our dev community, and let's code, create, and innovate together!</strong></p>
-          </div>
-        </div>
-      </section>
+			<section class="my-5" id="learn-more">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<img
+							class="img-fluid rounded-3 shadow-lg"
+							src="./assets/img/about.svg"
+							alt="about-img"
+						/>
+					</div>
+					<div class="col-md-6">
+						<h2>Our Mission</h2>
+						<p>
+							Our mission is to be your go-to resource for everything related to
+							software development and technology. Whether you're a coding
+							novice or an experienced developer looking to stay on the cutting
+							edge, we've got something for you. Explore our deep dives into
+							programming languages and frameworks and stay updated with the
+							latest industry trends.
+						</p>
+						<p>
+							<strong
+								>Welcome to our dev community, and let's code, create, and
+								innovate together!</strong
+							>
+						</p>
+					</div>
+				</div>
+			</section>
 
-      <section class="faq-container my-5">
-        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-        <div class="accordion" id="faqAccordion">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Introduction
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We're a hosted version of the open source software, DevBlog. Because when you have the freedom to create, express yourself, and earn money online, the impossible becomes business as usual.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Everyone has a voice
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Ideas don't belong behind high walls. Software and your posts shouldn't either. We're here to help you express yourself.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Freedom and Ownership
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Whether it's a blog, store, portfolio, or something entirely different, you have the freedom to create a site that fits you, and own all of your content and data too.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                Real support from real people
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Customer service isn't something we offer. It's who we are. We call it Happiness—real support delivered by real human beings.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+			<section class="faq-container my-5">
+				<h2 class="text-center mb-4">Frequently Asked Questions</h2>
+				<div class="accordion" id="faqAccordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button
+								class="accordion-button"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseOne"
+								aria-expanded="true"
+								aria-controls="collapseOne"
+							>
+								Introduction
+							</button>
+						</h2>
+						<div
+							id="collapseOne"
+							class="accordion-collapse collapse show"
+							aria-labelledby="headingOne"
+							data-bs-parent="#faqAccordion"
+						>
+							<div class="accordion-body">
+								We're a hosted version of the open source software, DevBlog.
+								Because when you have the freedom to create, express yourself,
+								and earn money online, the impossible becomes business as usual.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTwo">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseTwo"
+								aria-expanded="false"
+								aria-controls="collapseTwo"
+							>
+								Everyone has a voice
+							</button>
+						</h2>
+						<div
+							id="collapseTwo"
+							class="accordion-collapse collapse"
+							aria-labelledby="headingTwo"
+							data-bs-parent="#faqAccordion"
+						>
+							<div class="accordion-body">
+								Ideas don't belong behind high walls. Software and your posts
+								shouldn't either. We're here to help you express yourself.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingThree">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseThree"
+								aria-expanded="false"
+								aria-controls="collapseThree"
+							>
+								Freedom and Ownership
+							</button>
+						</h2>
+						<div
+							id="collapseThree"
+							class="accordion-collapse collapse"
+							aria-labelledby="headingThree"
+							data-bs-parent="#faqAccordion"
+						>
+							<div class="accordion-body">
+								Whether it's a blog, store, portfolio, or something entirely
+								different, you have the freedom to create a site that fits you,
+								and own all of your content and data too.
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingFour">
+							<button
+								class="accordion-button collapsed"
+								type="button"
+								data-bs-toggle="collapse"
+								data-bs-target="#collapseFour"
+								aria-expanded="false"
+								aria-controls="collapseFour"
+							>
+								Real support from real people
+							</button>
+						</h2>
+						<div
+							id="collapseFour"
+							class="accordion-collapse collapse"
+							aria-labelledby="headingFour"
+							data-bs-parent="#faqAccordion"
+						>
+							<div class="accordion-body">
+								Customer service isn't something we offer. It's who we are. We
+								call it Happiness—real support delivered by real human beings.
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
-      <!-- Footer -->
-      <div class="footer-dark">
-        <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-3 item">
-                <h3>Services</h3>
-                <ul>
-                  <li><a href="#">Web design</a></li>
-                  <li><a href="#">Development</a></li>
-                  <li><a href="#">Hosting</a></li>
-                  <li><a href="#">Marketing</a></li>
-                  <li><a href="#">Content</a></li>
-                </ul>
-              </div>
-              <div class="col-sm-6 col-md-3 item">
-                <h3>About</h3>
-                <ul>
-                  <li><a href="#">Company</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 item text">
-                <h3>DevBlog</h3>
-                <p>
-                  DevBlog is a Blogpost Platform where the Users can Upload
-                  their Articles and Literatures on the Web and the maintainers
-                  of the Website can approve of them and then Publish it onto
-                  the Blog.
-                </p>
-              </div>
-              <div class="col item social">
-                <a href="#"><i class="fab fa-facebook"></i></a
-                ><a href="#"><i class="fab fa-twitter"></i></a
-                ><a href="#"><i class="fab fa-snapchat"></i></a
-                ><a href="#"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-            <p class="copyright">DevBlog © <script>document.write(new Date().getFullYear())</script> </p>
-          </div>
-        </footer>
-      </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/about.js"></script>
-  <script>
-    var themeSheet = document.querySelector("#theme-sheet");
-    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
+		<!-- Footer -->
+		<div id="footer-placeholder"></div>
+	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/about.js"></script>
+	<script>
+		var themeSheet = document.querySelector("#theme-sheet");
+		var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
 
-    function applyTheme() {
-      if (isDarkModeEnabled === "true") {
-        themeSheet.href = "assets/css/darktheme.css";
-      } else {
-        themeSheet.href = "assets/css/style.css";
-      }
-    }
+		function applyTheme() {
+			if (isDarkModeEnabled === "true") {
+				themeSheet.href = "assets/css/darktheme.css";
+			} else {
+				themeSheet.href = "assets/css/style.css";
+			}
+		}
 
-    applyTheme();
+		applyTheme();
 
-    function theme() {
-      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
-        themeSheet.href = "assets/css/darktheme.css";
-        localStorage.setItem("isDarkmodeEnabled", true);
-      } else {
-        themeSheet.href = "assets/css/style.css";
-        localStorage.setItem("isDarkmodeEnabled", false);
-      }
-    }
-  </script>
-  <!-- Fontawesome Script -->
-  <script
-    src="https://kit.fontawesome.com/6d2226036d.js"
-    crossorigin="anonymous"
-  ></script>
+		function theme() {
+			if (themeSheet.getAttribute("href") == "assets/css/style.css") {
+				themeSheet.href = "assets/css/darktheme.css";
+				localStorage.setItem("isDarkmodeEnabled", true);
+			} else {
+				themeSheet.href = "assets/css/style.css";
+				localStorage.setItem("isDarkmodeEnabled", false);
+			}
+		}
+	</script>
+	<!-- Fontawesome Script -->
+	<script
+		src="https://kit.fontawesome.com/6d2226036d.js"
+		crossorigin="anonymous"
+	></script>
 </html>
