@@ -27,7 +27,6 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
-
     <div class="container my-5 pt-5">
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -35,29 +34,59 @@
             <div class="card-body p-5">
               <h2 class="card-title text-center mb-4">Contact Us</h2>
               <form id="contact-form" action="" method="post">
-                  <div class="mb-3">
-                      <label for="name" class="form-label">Your Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                  </div>
-                  <div class="mb-3">
-                      <label for="email" class="form-label">Email Address</label>
-                      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                  </div>
-                  <div class="mb-3">
-                      <label for="phone" class="form-label">Phone Number</label>
-                      <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                  </div>
-                   <div class="mb-3">
-                      <label for="website" class="form-label">Website</label>
-                      <input type="url" class="form-control" id="website" placeholder="Your website URL">
-                  </div>
-                  <div class="mb-3">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
-                  </div>
-                  <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                  </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="website" class="form-label">Website</label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    id="website"
+                    placeholder="Your website URL"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Type your message here..."
+                    required
+                  ></textarea>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    Submit
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -65,6 +94,48 @@
       </div>
     </div>
 
+    <!-- Confirmation Modal -->
+    <div
+      class="modal fade"
+      id="confirmationModal"
+      tabindex="-1"
+      aria-labelledby="confirmationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">
+              Confirm Submission
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to submit this form?</p>
+            <p class="text-muted small mb-0">
+              Please review your information before confirming.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmSubmit">
+              Confirm Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- footer -->
 
@@ -113,28 +184,57 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    var themeSheet = document.querySelector("#theme-sheet");
-    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
+    var themeSheet = document.querySelector('#theme-sheet')
+    var isDarkModeEnabled = window.themeStorage || 'false'
+
+    // Initialize theme storage variable
+    if (!window.themeStorage) {
+      window.themeStorage = 'false'
+    }
 
     function applyTheme() {
-      if (isDarkModeEnabled === "true") {
-        themeSheet.href = "assets/css/darktheme.css";
+      if (window.themeStorage === 'true') {
+        themeSheet.href = 'assets/css/darktheme.css'
       } else {
-        themeSheet.href = "assets/css/style.css";
+        themeSheet.href = 'assets/css/style.css'
       }
     }
 
-    applyTheme();
+    applyTheme()
 
     function theme() {
-      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
-        themeSheet.href = "assets/css/darktheme.css";
-        localStorage.setItem("isDarkmodeEnabled", true);
+      if (themeSheet.getAttribute('href') == 'assets/css/style.css') {
+        themeSheet.href = 'assets/css/darktheme.css'
+        window.themeStorage = 'true'
       } else {
-        themeSheet.href = "assets/css/style.css";
-        localStorage.setItem("isDarkmodeEnabled", false);
+        themeSheet.href = 'assets/css/style.css'
+        window.themeStorage = 'false'
       }
     }
+
+    // Form submission with confirmation modal
+    var contactForm = document.getElementById('contact-form')
+    var confirmationModal = new bootstrap.Modal(
+      document.getElementById('confirmationModal')
+    )
+    var confirmSubmitBtn = document.getElementById('confirmSubmit')
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault()
+
+      // Show confirmation modal
+      confirmationModal.show()
+    })
+
+    confirmSubmitBtn.addEventListener('click', function () {
+      // Hide modal
+      confirmationModal.hide()
+
+      // Actually submit the form
+      // In a real application, you would send the data via AJAX here
+      alert('Form submitted successfully!')
+      contactForm.reset()
+    })
   </script>
 <script>
 window.addEventListener("scroll", function() {

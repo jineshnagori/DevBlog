@@ -13,32 +13,28 @@
   --font1: "Baloo Bhaina 2", cursive;
 }
 .navbar-frosted {
-    /* The core blur effect remains the same */
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-
-    /* 1. A dark, semi-transparent background */
-    background: rgba(20, 20, 20, 0.4) !important;
-    
-    /* 2. A light, subtle border for contrast */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    /* 3. A subtle shadow */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: rgba(20, 20, 20, 0.5) !important; /* darker and semi-transparent */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-frosted .nav-link, 
 .navbar-frosted .navbar-brand {
-    color: #f0f0f0 !important; 
+    color: var(--light-color) !important; 
 }
 
 .navbar-frosted .nav-link:hover, 
 .navbar-frosted .navbar-brand:hover {
     color: #ffffff !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
+
 body {
-  background-color: #121212;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #1f1f1f 100%);
   color: var(--light-color);
+  transition: background 0.4s, color 0.4s;
 }
 
 .bg-light {
@@ -47,6 +43,18 @@ body {
 
 .navbar-brand, .nav-link {
     color: var(--light-color) !important;
+}
+
+/* Dark theme for contributor flip cards */
+.contributor-card-front,
+.contributor-card-back {
+  background: #1e1e1e !important;
+  color: var(--light-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contributor-card-back {
+  background: #2a2a2a !important;
 }
 
 .btn-theme {
@@ -62,8 +70,12 @@ body {
 }
 
 .card {
-    background-color: #1e1e1e;
-    border-color: #333;
+  background: rgba(25, 25, 25, 0.6); /* darker glass tint */
+  backdrop-filter: blur(12px);       /* frosted blur */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }
 
 .card-title a, .card-text {
@@ -80,28 +92,26 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(33, 37, 41, 0.3); /* semi-transparent dark track */
-  border-radius: 10px;
-  backdrop-filter: blur(5px); /* glassy blur */
-  -webkit-backdrop-filter: blur(5px);
+  background: rgb(33 37 41 / 30%); /* semi-transparent dark track */
+  border-radius: 10px; /* glassy blur */
+  backdrop-filter: blur(5px);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.6); /* semi-transparent primary color */
+  background-color: rgb(255 255 255 / 60%); /* semi-transparent primary color */
   border-radius: 10px;
-  border: 2px solid rgba(33, 37, 41, 0.3);
-  backdrop-filter: blur(5px); /* glassy blur on thumb too */
-  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid rgb(33 37 41 / 30%); /* glassy blur on thumb too */
+  backdrop-filter: blur(5px);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.8); /* more visible on hover */
+  background-color: rgb(255 255 255 / 80%); /* more visible on hover */
   transform: scaleY(1.1);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.6) rgba(33, 37, 41, 0.3);
+  scrollbar-color: rgb(255 255 255 / 60%) rgb(33 37 41 / 30%);
 }
