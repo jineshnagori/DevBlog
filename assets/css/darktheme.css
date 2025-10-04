@@ -74,6 +74,43 @@ body {
   background-color: #000;
 }
 
+/* CSS Grid Layout for Articles */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 576px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .articles-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 993px) {
+    .articles-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 /* Glassmorphism Scrollbar for Webkit browsers */
 ::-webkit-scrollbar {
   width: 10px;
