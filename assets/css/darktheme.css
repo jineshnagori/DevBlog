@@ -49,6 +49,18 @@ body {
     color: var(--light-color) !important;
 }
 
+/* Dark theme for contributor flip cards */
+.contributor-card-front,
+.contributor-card-back {
+  background: #1e1e1e !important;
+  color: var(--light-color) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contributor-card-back {
+  background: #2a2a2a !important;
+}
+
 .btn-theme {
   color: var(--light-color);
 }
