@@ -24,83 +24,8 @@
 
   <body>
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
-    >
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <span class="ml-3 font-weight-bold font2">DevBlog</span>
-        </a>
-        <button
-          class="navbar-toggler navbar-toggler-right border-1"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar4"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div id="navbar-placeholder"></div>
 
-        <div class="collapse navbar-collapse" id="navbar4">
-          <ul class="navbar-nav mx-auto pl-lg-4">
-            <li class="nav-item px-lg-2 active">
-              <a class="nav-link" href="index.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-house"></i></span
-                >Home</a
-              >
-            </li>
-            <li class="nav-item px-lg-2">
-              <a class="nav-link" href="about.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-user"></i></span
-                >About</a
-              >
-            </li>
-
-            <li class="nav-item px-lg-2">
-              <a class="nav-link" href="contact.html"
-                ><span class="d-inline-block d-lg-none icon-width pe-1"
-                  ><i class="fa-solid fa-envelope"></i></span
-                >Contact</a
-              >
-            </li>
-          </ul>
-          <button id="themeBtn" onclick="theme()" class="btn-theme">
-            <i class="fas fa-sun" id="sun"></i>
-            <i class="fas fa-moon" id="moon"></i>
-        </button>
-          <ul class="navbar-nav ml-auto mt-3 mt-lg-0" id="navbar-social-icons">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-twitter pe-1"></i
-                ><span class="d-lg-none ml-3">Twitter</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-facebook pe-1"></i
-                ><span class="d-lg-none ml-3">Facebook</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-instagram pe-1"></i
-                ><span class="d-lg-none ml-3">Instagram</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="fab fa-linkedin-in pe-1"></i
-                ><span class="d-lg-none ml-3">Linkedin</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <div class="container my-5 pt-5">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -239,6 +164,23 @@
       }
     }
   </script>
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
+<script>
+fetch("templates/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar-placeholder").innerHTML = data;
+  });
+</script>
   <!-- Fontawesome Script -->
   <script
     src="https://kit.fontawesome.com/6d2226036d.js"
