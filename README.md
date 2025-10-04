@@ -1,4 +1,4 @@
-![image](https://github.com/jineshnagori/hacktoberfest2025-WebDev/blob/main/assets/img/hacktoberfest.png)
+![image](https://github.com/jineshnagori/DevBlog/blob/main/assets/img/hacktoberfest.png)
 
 <h1 align="center"> Hacktoberfest 2025 </h1>
 
