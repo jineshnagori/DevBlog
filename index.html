@@ -317,6 +317,16 @@
         }
     }
 </script>
+<script>
+window.addEventListener("scroll", function() {
+  const navbar = document.querySelector(".navbar-frosted");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+</script>
 <!-- Fontawesome Script -->
 <script src="https://kit.fontawesome.com/6d2226036d.js" crossorigin="anonymous"></script>
 
