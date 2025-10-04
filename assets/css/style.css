@@ -216,3 +216,35 @@ a:hover {
   }
 }
 
+/* 🌟 Back to Top Button - Final Fixed Version */
+.back-to-top {
+  position: fixed;
+  bottom: 100px; /* moved up so it doesn’t overlap chatbot */
+  right: 40px;
+  opacity: 0;
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color, #0d6efd);
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 99999; /* ensures it’s above chatbot and footer */
+  transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  background-color: #0a58ca;
+  transform: translateY(-3px);
+}
