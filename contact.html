@@ -15,12 +15,12 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
     />
 
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - Blog for Developers</title>
-    <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
   </head>
 
   <body>
@@ -194,20 +194,20 @@
 
     function applyTheme() {
       if (window.themeStorage === 'true') {
-        themeSheet.href = 'assets/css/darktheme.css'
+        themeSheet.href = 'assets/style/darktheme.css'
       } else {
-        themeSheet.href = 'assets/css/style.css'
+        themeSheet.href = 'assets/style/style.css'
       }
     }
 
     applyTheme()
 
     function theme() {
-      if (themeSheet.getAttribute('href') == 'assets/css/style.css') {
-        themeSheet.href = 'assets/css/darktheme.css'
+      if (themeSheet.getAttribute('href') == 'assets/style/style.css') {
+        themeSheet.href = 'assets/style/darktheme.css'
         window.themeStorage = 'true'
       } else {
-        themeSheet.href = 'assets/css/style.css'
+        themeSheet.href = 'assets/style/style.css'
         window.themeStorage = 'false'
       }
     }

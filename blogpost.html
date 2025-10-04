@@ -15,9 +15,9 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
+    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>iBlog - Heaven for bloggers</title>
   </head>
@@ -129,7 +129,7 @@
       </footer>
     </div>
   </body>
-  <script src="assets/js/index.js"></script>
+  <script src="assets/script/index.js"></script>
 
   <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -153,20 +153,20 @@
 
     function applyTheme() {
       if (isDarkModeEnabled === "true") {
-        themeSheet.href = "assets/css/darktheme.css";
+        themeSheet.href = "assets/style/darktheme.css";
       } else {
-        themeSheet.href = "assets/css/style.css";
+        themeSheet.href = "assets/style/style.css";
       }
     }
 
     applyTheme();
 
     function theme() {
-      if (themeSheet.getAttribute("href") == "assets/css/style.css") {
-        themeSheet.href = "assets/css/darktheme.css";
+      if (themeSheet.getAttribute("href") == "assets/style/style.css") {
+        themeSheet.href = "assets/style/darktheme.css";
         localStorage.setItem("isDarkmodeEnabled", true);
       } else {
-        themeSheet.href = "assets/css/style.css";
+        themeSheet.href = "assets/style/style.css";
         localStorage.setItem("isDarkmodeEnabled", false);
       }
     }
