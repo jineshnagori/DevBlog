@@ -17,30 +17,6 @@
     />
     <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
   </head>
-  <style>
-    div.about-style {
-      background-color: rgb(180, 196, 220);
-      border-style: line;
-      width: 800px;
-      border: 15px solid rgb(48, 94, 193);
-      padding: 20px;
-      margin: 20px;
-    }
-    .hero-text{
-      font-size:  1.2rem;
-    }
-    @media screen and (max-width: 600px) {
-      .faq-page {
-        font-size: 1.1rem;
-      }
-      .about-img{
-        width: 24rem;
-      }
-      .hero-text{
-        font-size:  1rem;
-      }
-    }
-  </style>
 
   <body>
     <!--Start of Tawk.to Script-->
@@ -79,7 +55,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbar4">
-          <ul class="navbar-nav mr-auto pl-lg-4">
+          <ul class="navbar-nav mx-auto pl-lg-4">
             <li class="nav-item px-lg-2">
               <a class="nav-link" href="index.html"
                 ><span class="d-inline-block d-lg-none icon-width pe-1"
@@ -112,62 +88,9 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon ion-social-twitter"> </i
-                ><span class="d-lg-none ml-3">Twitter</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon ion-social-facebook"> </i
-                ><span class="d-lg-none ml-3">Facebook</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon ion-social-instagram"> </i
-                ><span class="d-lg-none ml-3">Instagram</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="nav-icon ion-social-linkedin"> </i
-                ><span class="d-lg-none ml-3">Linkedin</span>
-              </a>
-            </li> -->
-
-            <button id="themeBtn" onclick="theme()">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                fill="orange"
-                class="bi bi-sun-fill"
-                viewBox="0 0 16 16"
-                id="sun"
-              >
-                <path
-                  d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                />
-              </svg>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="white"
-                class="bi bi-moon-stars-fill"
-                viewBox="0 0 16 16"
-                id="moon"
-              >
-                <path
-                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-                />
-                <path
-                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-                />
-              </svg>
+            <button id="themeBtn" onclick="theme()" class="btn-theme">
+                <i class="fas fa-sun" id="sun"></i>
+                <i class="fas fa-moon" id="moon"></i>
             </button>
 
             <a class="mx-3 my-1 btn btn-primary" href="AddBlog.html"
@@ -178,117 +101,81 @@
       </div>
     </nav>
 
-    <div class="about-flex">
-      <main class="about-page">
-        <br /><br /><br />
-        
-        <section class="about-hero">
-          <div class="heading">
-            <h1><strong>About DevBlog</strong></h1>
+    <div class="container my-5 pt-5">
+      <section class="about-hero text-center">
+        <h1 class="display-4"><strong>About DevBlog</strong></h1>
+        <p class="lead col-md-8 mx-auto">At DevBlog, we're more than just developers; we're passionate creators, problem solvers, and innovators, here to share our insights, experiences, and knowledge with you.</p>
+        <a href="#learn-more" class="btn btn-primary btn-lg">Learn More</a>
+      </section>
+
+      <section class="my-5" id="learn-more">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img class="img-fluid rounded-3 shadow-lg" src="./assets/img/about.svg" alt="about-img">
           </div>
-          <div class="about-container">
-            <div class="hero-content">
-              <p class="hero-text">At DevBlog,We're not just
-                developers; we're passionate creators, problem solvers, and innovators, and we're here to share our
-                insights, experiences, and knowledge with you.
-                <br>
-                Our mission is to be your go-to resource for everything related to software development and
-                technology. Whether you're a coding novice or an
-                experienced developer looking to stay on the cutting edge, we've got something for you.<br>
-                Explore our deep dives into programming languages and frameworks and stay updated with the latest industry
-                trends.
-                <br>
-                <br>
-                <strong>Welcome to our dev community, and let's code, create, and innovate together!</strong>
-    
-    
-    
-              </p>
-              <div class="col" style="text-align: center;">
-                <a href="about.html"><button class="cta-button">Learn More</button></a>
+          <div class="col-md-6">
+            <h2>Our Mission</h2>
+            <p>Our mission is to be your go-to resource for everything related to software development and technology. Whether you're a coding novice or an experienced developer looking to stay on the cutting edge, we've got something for you. Explore our deep dives into programming languages and frameworks and stay updated with the latest industry trends.</p>
+            <p><strong>Welcome to our dev community, and let's code, create, and innovate together!</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-container my-5">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Introduction
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We're a hosted version of the open source software, DevBlog. Because when you have the freedom to create, express yourself, and earn money online, the impossible becomes business as usual.
               </div>
-              
-            </div>
-
-
-            <div class="hero-about-image">
-              <img class="about-img" src="./assets/img/about.svg" alt="about-img">
             </div>
           </div>
-        </section>
-        <br>
-        <br>
-    
-        <section class="faq-container">
-          <div class="faq-one">
-            <!-- faq question -->
-            <h1 class="faq-page">Introduction</h1>
-
-            <!-- faq answer -->
-            <div class="faq-body">
-              <p>
-                We're a hosted version of the open source software, DevBlog.
-                Because when you have the freedom to create, express yourself,
-                and earn money online, the impossible becomes business as usual.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Everyone has a voice
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ideas don't belong behind high walls. Software and your posts shouldn't either. We're here to help you express yourself.
+              </div>
             </div>
           </div>
-        
-          <br>
-
-          <div class="faq-two">
-            <!-- faq question -->
-            <h1 class="faq-page">
-              Everyone has a voice and something to express
-            </h1>
-
-            <!-- faq answer -->
-
-            <div class="faq-body">
-              <p>
-                Ideas don't belong behind high walls. Software and your posts
-                shouldn't either. We're here to help you express yourself.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Freedom and Ownership
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Whether it's a blog, store, portfolio, or something entirely different, you have the freedom to create a site that fits you, and own all of your content and data too.
+              </div>
             </div>
           </div>
-          <br>
-
-          <div class="faq-three">
-            <!-- faq question -->
-            <h1 class="faq-page">Freedom and Ownership</h1>
-
-            <!-- faq answer -->
-            <div class="faq-body">
-              <p>
-                Whether it's a blog, store, portfolio, or something entirely
-                different, you have the freedom to create a site that fits you,
-                and own all of your content and data too.
-              </p>
-              
-            </div>
-            
-          </div>
-           
-          <br>
-          <div class="faq-four">
-            <!-- faq question -->
-            <h1 class="faq-page">Real support from real people</h1>
-
-            <!-- faq answer -->
-            <div class="faq-body">
-              <p>
-                Customer service isn't something we offer. It's who we are. We
-                call it Happiness—real support delivered by real human beings.
-              </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Real support from real people
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Customer service isn't something we offer. It's who we are. We call it Happiness—real support delivered by real human beings.
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+    </div>
 
-        </section>
-      </main>
-      <br />
-      <br />
-      <br />
-      <br />
       <!-- Footer -->
       <div class="footer-dark">
         <footer>
@@ -318,23 +205,20 @@
                   DevBlog is a Blogpost Platform where the Users can Upload
                   their Articles and Literatures on the Web and the maintainers
                   of the Website can approve of them and then Publish it onto
-                  the Blog. It is a great tool for People worldwide to connect
-                  with each other using their Articles and share their stories
-                  and Experiences.
+                  the Blog.
                 </p>
               </div>
               <div class="col item social">
-                <a href="#"><i class="fa-brands fa-facebook"></i></a
-                ><a href="#"><i class="fa-brands fa-x-twitter"></i></a
-                ><a href="#"><i class="icon ion-social-snapchat"></i></a
-                ><a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a
+                ><a href="#"><i class="fab fa-twitter"></i></a
+                ><a href="#"><i class="fab fa-snapchat"></i></a
+                ><a href="#"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
             <p class="copyright">DevBlog © <script>document.write(new Date().getFullYear())</script> </p>
           </div>
         </footer>
       </div>
-    </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -354,7 +238,6 @@
     applyTheme();
 
     function theme() {
-      console.log("background changed");
       if (themeSheet.getAttribute("href") == "assets/css/style.css") {
         themeSheet.href = "assets/css/darktheme.css";
         localStorage.setItem("isDarkmodeEnabled", true);
