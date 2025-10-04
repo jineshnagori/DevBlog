@@ -28,7 +28,7 @@
   height: 100%;
   backface-visibility: hidden;
   border-radius: 1rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -52,4 +52,48 @@
   color: var(--primary-color);
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* Dynamic CSS Grid Layout */
+#contributors-container {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  /* Default for mobile: 1 column */
+  grid-template-columns: repeat(1, minmax(280px, 1fr));
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #contributors-container {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #contributors-container {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #contributors-container {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #contributors-container {
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+  }
+}
+
+/* Extra extra large devices (larger screens, 1400px and up) */
+@media (min-width: 1400px) {
+  #contributors-container {
+    grid-template-columns: repeat(5, minmax(280px, 1fr));
+  }
 }
