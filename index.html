@@ -181,7 +181,7 @@
                                 class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <p class="copyright">DevBlog © 2025</p>
+                <p class="copyright">DevBlog © <span id="copyright-year">2000</span></p>
             </div>
         </footer>
     </div>
@@ -209,6 +209,15 @@
             localStorage.setItem("isDarkmodeEnabled", false);
         }
     }
+
+    // dynamically setting year in footer
+    document.addEventListener('DOMContentLoaded', () => {
+        const yearSpan = document.getElementById('copyright-year');
+        if(yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+
 </script>
 <!-- Fontawesome Script -->
 <script src="https://kit.fontawesome.com/6d2226036d.js" crossorigin="anonymous"></script>
