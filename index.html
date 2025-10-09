@@ -19,6 +19,36 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style/style.css" />
+
+    <!-- Scrollbar Styling -->
+    <style>
+      /* Webkit Browsers (Chrome, Edge, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #4a90e2; /* theme accent color */
+        border-radius: 4px;
+        border: 2px solid #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #357ab7; /* darker on hover */
+      }
+
+      /* Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #4a90e2 #f1f1f1;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar placeholder -->
@@ -105,8 +135,6 @@
             </div>
           </div>
         </div>
-
-        <!-- You can add more article cards similarly -->
       </div>
 
       <!-- No Results Message -->
@@ -128,43 +156,41 @@
       fetch("templates/navbar.html")
         .then((response) => response.text())
         .then((data) => {
-          document.getElementById("navbar-placeholder").innerHTML = data;
+          const navbar = document.getElementById("navbar-placeholder");
+          navbar.innerHTML = data;
 
-          setTimeout(() => {
-            const searchInput = document.getElementById("searchInput");
-            const noResults = document.getElementById("noResults");
+          const searchInput = document.getElementById("searchInput");
+          const noResults = document.getElementById("noResults");
 
-            if (searchInput) {
-              searchInput.addEventListener("keyup", function () {
-                const filter = this.value.toLowerCase();
-                const articles = document.querySelectorAll(".article-item");
-                let found = 0;
+          if (searchInput) {
+            searchInput.addEventListener("keyup", function () {
+              const filter = this.value.toLowerCase();
+              const articles = document.querySelectorAll(".article-item");
+              let found = 0;
 
-                articles.forEach((article) => {
-                  const text = article.textContent.toLowerCase();
-                  if (text.includes(filter)) {
-                    article.style.display = "";
-                    found++;
-                  } else {
-                    article.style.display = "none";
-                  }
-                });
-
-                noResults.style.display = found === 0 ? "block" : "none";
-              });
-
-              // Optional: clear filter on ESC key
-              searchInput.addEventListener("keydown", (e) => {
-                if (e.key === "Escape") {
-                  searchInput.value = "";
-                  document
-                    .querySelectorAll(".article-item")
-                    .forEach((a) => (a.style.display = ""));
-                  noResults.style.display = "none";
+              articles.forEach((article) => {
+                const text = article.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                  article.style.display = "";
+                  found++;
+                } else {
+                  article.style.display = "none";
                 }
               });
-            }
-          }, 100);
+
+              noResults.style.display = found === 0 ? "block" : "none";
+            });
+
+            searchInput.addEventListener("keydown", (e) => {
+              if (e.key === "Escape") {
+                searchInput.value = "";
+                document
+                  .querySelectorAll(".article-item")
+                  .forEach((a) => (a.style.display = ""));
+                noResults.style.display = "none";
+              }
+            });
+          }
         });
     </script>
   </body>
