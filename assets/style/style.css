@@ -36,6 +36,7 @@ body {
   background-color: #f8f9fa;
   color: var(--dark-color);
   padding-top: 70px; /* For fixed navbar */
+  overflow-x: hidden;
 }
 
 a {
@@ -85,9 +86,17 @@ a:hover {
 
 /* Footer */
 .footer-dark {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
   background-color: var(--dark-color);
   color: var(--light-color);
   padding: 40px 0;
+  margin-bottom: -3rem;
+  overflow: hidden;
 }
 
 .footer-dark h3 {
