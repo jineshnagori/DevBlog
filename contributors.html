@@ -15,26 +15,77 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-
     <link rel="icon" type="image/x-icon" href="assets/img/blog.png" />
     <title>DevBlog - Blog for Developers</title>
-    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
-    <link rel="stylesheet" href="assets/style/contributor-flip.css" />
-
+    <link rel="stylesheet" href="assets/css/style.css" id="theme-sheet" />
   </head>
+
   <body>
+    <!-- Navbar -->
+    <nav
+      class="font2 navbar navbar-expand-lg navbar-light shadow-sm bg-light fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <span class="ml-3 font-weight-bold font2">DevBlog</span>
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right border-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar4"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div id="navbar-placeholder"></div>
+        <div class="collapse navbar-collapse" id="navbar4">
+          <ul class="navbar-nav mx-auto pl-lg-4">
+            <li class="nav-item px-lg-2">
+              <a class="nav-link" href="index.html"
+                ><i class="fa-solid fa-house d-lg-none pe-1"></i>Home</a>
+            </li>
+            <li class="nav-item px-lg-2">
+              <a class="nav-link" href="about.html"
+                ><i class="fa-solid fa-user d-lg-none pe-1"></i>About</a>
+            </li>
+            <li class="nav-item px-lg-2">
+              <a class="nav-link" href="contact.html"
+                ><i class="fa-solid fa-envelope d-lg-none pe-1"></i>Contact</a>
+            </li>
+            <li class="nav-item px-lg-2 active">
+              <a class="nav-link" href="contributors.html"
+                ><i class="fa-solid fa-user-group d-lg-none pe-1"></i
+                >Contributors</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto mt-3 mt-lg-0">
+            <button id="themeBtn" onclick="theme()" class="btn-theme">
+              <i class="fas fa-sun" id="sun"></i>
+              <i class="fas fa-moon" id="moon"></i>
+            </button>
+            <a class="mx-3 my-1 btn btn-primary" href="AddBlog.html">Add Blog</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <!-- Contributors Section -->
+    <div class="container my-5 pt-5">
+      <h2 class="text-center mb-5">Top Contributors</h2>
+      <div id="top-contributors-container" class="row g-4 justify-content-center">
+        <!-- Top 3 contributors will be dynamically loaded here -->
+      </div>
 
-		<!-- Footer -->
-		<div id="footer-placeholder"></div>
-	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+      <h2 class="text-center mb-5">Our Contributors</h2>
+      <div id="contributors-container" class="row g-4">
+        <!-- Remaining contributors will be dynamically loaded here -->
+      </div>
+    </div>
 
     <!-- Footer -->
     <div class="footer-dark">
@@ -68,149 +119,105 @@
               </p>
             </div>
             <div class="col item social">
-              <a href="#"><i class="fab fa-facebook"></i></a
-              ><a href="#"><i class="fab fa-twitter"></i></a
-              ><a href="#"><i class="fab fa-snapchat"></i></a
-              ><a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-snapchat"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
-          <p class="copyright">DevBlog © 2025</p>
+          <p class="copyright">DevBlog © <span id="copyright-year">2025</span></p>
         </div>
       </footer>
     </div>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script type="module">
-    import { Octokit } from "https://cdn.pika.dev/@octokit/core@1.3.2";
-    const octokit = new Octokit();
-    
-    // Function to get user details for additional info
-    async function getUserDetails(username) {
-      try {
-        const response = await octokit.request("GET /users/:username", {
-          username: username,
-        });
-        return response.data;
-      } catch (error) {
-        console.error(`Error fetching user details for ${username}:`, error);
-        return null;
-      }
-    }
-    
-    octokit
-      .request("GET /repos/:owner/:repo/contributors", {
-        owner: "jineshnagori",
-        repo: "DevBlog",
-      })
-      .then(async (response) => {
-        const contributorsHtml = await Promise.all(
-          response.data.map(async (user) => {
-            const userDetails = await getUserDetails(user.login);
-            const bio = userDetails?.bio || "Developer and open source contributor";
-            const name = userDetails?.name || user.login;
-            const location = userDetails?.location || "";
-            const company = userDetails?.company || "";
-            
-            return `
-              <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="contributor-card" onclick="toggleFlip(this)">
-                  <div class="contributor-card-inner">
-                    <div class="contributor-card-front">
-                      <img src="${user.avatar_url}" class="rounded-circle p-3" style="width: 120px; height: 120px; object-fit: cover;" alt="${user.login}">
-                      <div class="text-center p-3">
-                        <h5 class="mb-2">${name}</h5>
-                        <p class="text-muted mb-2">@${user.login}</p>
-                        <p class="text-primary fw-bold">${user.contributions} contributions</p>
-                      </div>
-                    </div>
-                    <div class="contributor-card-back">
-                      <div class="text-center h-100 d-flex flex-column justify-content-center">
-                        <img src="${user.avatar_url}" class="rounded-circle mb-3 mx-auto" style="width: 80px; height: 80px; object-fit: cover;" alt="${user.login}">
-                        <h6 class="mb-2">${name}</h6>
-                        <p class="small text-muted mb-2">${bio}</p>
-                        ${location ? `<p class="small mb-1"><i class="fas fa-map-marker-alt me-1"></i>${location}</p>` : ''}
-                        ${company ? `<p class="small mb-2"><i class="fas fa-building me-1"></i>${company}</p>` : ''}
-                        <a href="${user.html_url}" target="_blank" class="btn btn-primary btn-sm mt-2">
-                          <i class="fab fa-github me-1"></i>View Profile
-                        </a>
-                      </div>
-                    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="module">
+      import { Octokit } from "https://cdn.pika.dev/@octokit/core@1.3.2";
+      const octokit = new Octokit();
+
+      octokit
+        .request("GET /repos/:owner/:repo/contributors", {
+          owner: "jineshnagori",
+          repo: "DevBlog",
+        })
+        .then((response) => {
+          // Sort contributors by contributions
+          const contributors = response.data.sort(
+            (a, b) => b.contributions - a.contributions
+          );
+
+          // Top 3 contributors
+          const topContributors = contributors.slice(0, 3);
+          document.getElementById("top-contributors-container").innerHTML =
+            topContributors
+              .map(
+                (user) => `
+              <div class="col-lg-4 col-md-6">
+                <div class="card h-100 text-center shadow-sm top-contributor-card">
+                  <span class="top-contributor-badge">Top Contributor</span>
+                  <img src="${user.avatar_url}" class="card-img-top rounded-circle p-3" alt="${user.login}">
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="${user.html_url}" target="_blank">${user.login}</a></h5>
+                    <p class="card-text">Contributions: ${user.contributions}</p>
                   </div>
                 </div>
-              </div>`;
-          })
-        );
-        
-        document.getElementById("contributors-container").innerHTML = contributorsHtml.join("");
-      });
-  </script>
-  <script>
-    var themeSheet = document.querySelector("#theme-sheet");
-    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
+              </div>`
+              )
+              .join("");
 
-    function applyTheme() {
-      if (isDarkModeEnabled === "true") {
-        themeSheet.href = "assets/style/darktheme.css";
-      } else {
-        themeSheet.href = "assets/style/style.css";
-      }
-    }
+          // Remaining contributors
+          const otherContributors = contributors.slice(3);
+          document.getElementById("contributors-container").innerHTML =
+            otherContributors
+              .map(
+                (user) => `
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 text-center shadow-sm contributor-card">
+                  <img src="${user.avatar_url}" class="card-img-top rounded-circle p-3" alt="${user.login}">
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="${user.html_url}" target="_blank">${user.login}</a></h5>
+                    <p class="card-text">Contributions: ${user.contributions}</p>
+                  </div>
+                </div>
+              </div>`
+              )
+              .join("");
+        });
+    </script>
 
-		applyTheme();
+    <script>
+      var themeSheet = document.querySelector("#theme-sheet");
+      var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
 
-    function theme() {
-      if (themeSheet.getAttribute("href") == "assets/style/style.css") {
-        themeSheet.href = "assets/style/darktheme.css";
-        localStorage.setItem("isDarkmodeEnabled", true);
-      } else {
-        themeSheet.href = "assets/style/style.css";
-        localStorage.setItem("isDarkmodeEnabled", false);
-      }
-    }
-
-    // Function to toggle flip on mobile devices
-    function toggleFlip(card) {
-      // Only toggle on click for mobile devices
-      if (window.innerWidth <= 768) {
-        card.classList.toggle('flipped');
-      }
-    }
-
-    // Add event listeners for better mobile interaction
-    document.addEventListener('DOMContentLoaded', function() {
-      // Reset flip state when clicking outside cards on mobile
-      document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 && !e.target.closest('.contributor-card')) {
-          document.querySelectorAll('.contributor-card.flipped').forEach(card => {
-            card.classList.remove('flipped');
-          });
+      function applyTheme() {
+        if (isDarkModeEnabled === "true") {
+          themeSheet.href = "assets/css/darktheme.css";
+        } else {
+          themeSheet.href = "assets/css/style.css";
         }
-      });
-    });
-  </script>
-<script>
-window.addEventListener("scroll", function() {
-  const navbar = document.querySelector(".navbar-frosted");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-</script>
-<script>
-fetch("templates/navbar.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("navbar-placeholder").innerHTML = data;
-  });
-</script>
+      }
 
-  <!-- Fontawesome Script -->
-  <script
-    src="https://kit.fontawesome.com/6d2226036d.js"
-    crossorigin="anonymous"
-  ></script>
+      applyTheme();
+
+      function theme() {
+        if (themeSheet.getAttribute("href") == "assets/css/style.css") {
+          themeSheet.href = "assets/css/darktheme.css";
+          localStorage.setItem("isDarkmodeEnabled", true);
+        } else {
+          themeSheet.href = "assets/css/style.css";
+          localStorage.setItem("isDarkmodeEnabled", false);
+        }
+      }
+    </script>
+
+
+    <!-- Fontawesome Script -->
+    <script
+      src="https://kit.fontawesome.com/6d2226036d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
