@@ -494,6 +494,16 @@ a:hover {
   font-family: var(--font-family-accent);
 }
 
+/* Hover Zoom Effect for Blog Images */
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.article-item:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+
 /* Blog Post Page */
 .blog-container {
     max-width: 800px;        /* Keep content centered and readable */
@@ -600,4 +610,5 @@ a:hover {
   width: 140px;
   height: 140px;
   margin: 0 auto;
+}
 }
