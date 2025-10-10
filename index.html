@@ -1,396 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta
-			name="description"
-			content="DevBlog is the website dedicated only for true developers."
-		/>
-		<meta name="keywords" content="DevBlog, Blogs for Developer" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
-		/>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DevBlog is the website dedicated only for true developers." />
-    <meta name="keywords" content="DevBlog, Blogs for Developer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/style/ionicons.min.css" />
+    <title>DevBlog | Home</title>
 
-    <link rel="icon" type="image/x-icon" href="assets/img/blog.png" alt="blog"/>
-    <title>DevBlog - Blog for Developers</title>
-    <link rel="stylesheet" href="assets/style/style.css" id="theme-sheet" />
-    <link rel="stylesheet" href="assets/style/darktheme.css" id="dark-theme" disabled />
-</head>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<body>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {},
-            Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"),
-                s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = "https://embed.tawk.to/634ce581b0d6371309c9dea8/1gfi6112r";
-            s1.charset = "UTF-8";
-            s1.setAttribute("crossorigin", "*");
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of Tawk.to Script-->
-    <!-- Navbar -->
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/6dc5a29a27.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style/style.css" />
+
+    <!-- Scrollbar Styling -->
+    <style>
+      /* Webkit Browsers (Chrome, Edge, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #4a90e2; /* theme accent color */
+        border-radius: 4px;
+        border: 2px solid #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #357ab7; /* darker on hover */
+      }
+
+      /* Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #4a90e2 #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar placeholder -->
     <div id="navbar-placeholder"></div>
 
-		<header class="hero-section text-center text-white">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-10 mx-auto">
-						<h1 class="display-3 font-weight-bold">The Heaven for Bloggers</h1>
-						<p class="lead">
-							iBlog is a website which lets you submit an article which you like
-							to upload and after approval it will be on our website and you can
-							get a good amount of reach from here !
-						</p>
-						<a href="404.html" class="btn btn-lg btn-light">Start Writing</a>
-					</div>
-				</div>
-			</div>
-		</header>
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white">
+      <div class="container">
+        <h1 class="display-3 font-weight-bold">The Heaven for Bloggers</h1>
+        <p class="lead">
+          iBlog lets you submit articles. After approval, your content gets
+          published with good reach!
+        </p>
+        <a href="404.html" class="btn btn-lg btn-light">Start Writing</a>
+      </div>
+    </header>
 
-		<div class="container my-5">
-			<h2 class="text-center mb-5 featured">Featured Articles</h2>
-			<div class="row g-4">
-				<div class="col-lg-3 col-md-6">
-					<div class="card h-100 shadow-sm article-card">
-						<img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-						<div class="card-body d-flex flex-column">
-							<h5 class="card-title">
-								<a href="blogpost.html"
-									>Migrate your Kubernetes (From AKS to EKS). How?</a
-								>
-							</h5>
-							<p class="card-text text-muted">Developer 101</p>
-							<p class="card-text">
-								<small class="text-muted">07 January | 6 min read</small>
-							</p>
-							<a href="blogpost.html" class="btn btn-outline-primary mt-auto"
-								>Read More</a
-							>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="card h-100 shadow-sm article-card">
-						<img src="assets/img/2.png" class="card-img-top" alt="people wearing masks" />
-						<div class="card-body d-flex flex-column">
-							<h5 class="card-title">
-								<a href="blogpost.html">Become a Master in Linux. How?</a>
-							</h5>
-							<p class="card-text text-muted">Linux-King 123</p>
-							<p class="card-text">
-								<small class="text-muted">08 January | 5 min read</small>
-							</p>
-							<a href="blogpost.html" class="btn btn-outline-primary mt-auto"
-								>Read More</a
-							>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="card h-100 shadow-sm article-card">
-						<img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-						<div class="card-body d-flex flex-column">
-							<h5 class="card-title">
-								<a href="blogpost.html">The Ultimate guide to Center a Div</a>
-							</h5>
-							<p class="card-text text-muted">WebD68</p>
-							<p class="card-text">
-								<small class="text-muted">10 January | 10 min read</small>
-							</p>
-							<a href="blogpost.html" class="btn btn-outline-primary mt-auto"
-								>Read More</a
-							>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="card h-100 shadow-sm article-card">
-						<img src="assets/img/11.svg" class="card-img-top" alt="workspace" />
-						<div class="card-body d-flex flex-column">
-							<h5 class="card-title">
-								<a href="blogpost.html">Is HTML a programming language?</a>
-							</h5>
-							<p class="card-text text-muted">Developer MythBuster</p>
-							<p class="card-text">
-								<small class="text-muted">10 January | 6 min read</small>
-							</p>
-							<a href="blogpost.html" class="btn btn-outline-primary mt-auto"
-								>Read More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+    <!-- Articles Section -->
     <div class="container my-5">
-        <h2 class="text-center mb-5 featured">Featured Articles</h2>
-        <div class="row g-4" id="articles-row">
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Migrate your Kubernetes (From AKS to EKS). How?</a></h5>
-                        <p class="card-text text-muted">Developer 101</p>
-                        <p class="card-text"><small class="text-muted">07 January | 6 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
+      <h2 class="text-center mb-5 featured">Featured Articles</h2>
+      <div class="row" id="articleList">
+        <!-- Article 1 -->
+        <div class="col-lg-3 col-md-6 mb-4 article-item">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/1.png" class="card-img-top" alt="Kubernetes" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                <a href="blogpost.html">Migrate your Kubernetes (AKS → EKS)</a>
+              </h5>
+              <p class="card-text text-muted">Developer 101</p>
+              <p class="card-text"><small>07 Jan | 6 min read</small></p>
+              <a href="blogpost.html" class="btn btn-outline-primary mt-auto"
+                >Read More</a
+              >
             </div>
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/2.png" class="card-img-top" alt="people wearing masks" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Become a Master in Linux. How?</a></h5>
-                        <p class="card-text text-muted">Linux-King 123</p>
-                        <p class="card-text"><small class="text-muted">08 January | 5 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">The Ultimate guide to Center a Div</a></h5>
-                        <p class="card-text text-muted">WebD68</p>
-                        <p class="card-text"><small class="text-muted">10 January | 10 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/11.svg" class="card-img-top" alt="workspace" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Is HTML a programming language?</a></h5>
-                        <p class="card-text text-muted">Developer MythBuster</p>
-                        <p class="card-text"><small class="text-muted">10 January | 6 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <!-- duplicate items for pagination testing -->
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/css.png" class="card-img-top" alt="css" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Quick CSS Tricks You Should Know</a></h5>
-                        <p class="card-text text-muted">Frontend Tips</p>
-                        <p class="card-text"><small class="text-muted">12 February | 4 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/2.png" class="card-img-top" alt="people wearing masks" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Importance of DSA</a></h5>
-                        <p class="card-text text-muted">Linux-King 123</p>
-                        <p class="card-text"><small class="text-muted">08 January | 5 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 article-item">
-                <div class="card h-100 shadow-sm article-card">
-                    <img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title"><a href="blogpost.html">Coding v/s Programming</a></h5>
-                        <p class="card-text text-muted">WebD68</p>
-                        <p class="card-text"><small class="text-muted">10 January | 10 min read</small></p>
-                        <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-                    </div>
-                </div>
-            </div>
-        <!-- Extra Articles for Pagination Testing -->
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/3.png" class="card-img-top" alt="two women lighting diyas" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">Mastering Git in 2025</a></h5>
-            <p class="card-text text-muted">CodeWizard</p>
-            <p class="card-text"><small class="text-muted">15 March | 7 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
+          </div>
         </div>
-    </div>
-    <!-- 🌟 Back to Top Button -->
-<button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
-  <i class="fas fa-arrow-up"></i>
-</button>
-</div>
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/1.png" class="card-img-top" alt="article writing" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">10 React Tricks You Must Know</a></h5>
-            <p class="card-text text-muted">ReactQueen</p>
-            <p class="card-text"><small class="text-muted">18 March | 5 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/2.png" class="card-img-top" alt="people wearing masks" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">Docker Containers Simplified</a></h5>
-            <p class="card-text text-muted">DevOpsGuru</p>
-            <p class="card-text"><small class="text-muted">20 March | 6 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/3.png" class="card-img-top" alt="two women lighting diyas" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">Async/Await in JS Explained</a></h5>
-            <p class="card-text text-muted">JSNinja</p>
-            <p class="card-text"><small class="text-muted">22 March | 8 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/4.png" class="card-img-top" alt="person holding mask" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">CSS Grid vs Flexbox</a></h5>
-            <p class="card-text text-muted">StyleMaster</p>
-            <p class="card-text"><small class="text-muted">25 March | 7 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-        </div>
-    </div>
-</div>
-<div class="col-lg-3 col-md-6 article-item">
-    <div class="card h-100 shadow-sm article-card">
-        <img src="assets/img/2.png" class="card-img-top" alt="people wearing masks" />
-        <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><a href="blogpost.html">Understanding REST APIs</a></h5>
-            <p class="card-text text-muted">APIPro</p>
-            <p class="card-text"><small class="text-muted">28 March | 6 min read</small></p>
-            <a href="blogpost.html" class="btn btn-outline-primary mt-auto">Read More</a>
-        </div>
-    </div>
-</div>
 
-        <!-- Pagination controls will be injected here by JS -->
-        <nav aria-label="Article pagination" class="my-4">
-            <ul class="pagination justify-content-center" id="pagination"></ul>
-        </nav>
+        <!-- Article 2 -->
+        <div class="col-lg-3 col-md-6 mb-4 article-item">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/2.png" class="card-img-top" alt="Linux" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><a href="blogpost.html">Master Linux</a></h5>
+              <p class="card-text text-muted">Linux-King 123</p>
+              <p class="card-text"><small>08 Jan | 5 min read</small></p>
+              <a href="blogpost.html" class="btn btn-outline-primary mt-auto"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="col-lg-3 col-md-6 mb-4 article-item">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/1.png" class="card-img-top" alt="CSS Centering" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                <a href="blogpost.html">Ultimate Guide to Center a Div</a>
+              </h5>
+              <p class="card-text text-muted">WebD68</p>
+              <p class="card-text"><small>10 Jan | 10 min read</small></p>
+              <a href="blogpost.html" class="btn btn-outline-primary mt-auto"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="col-lg-3 col-md-6 mb-4 article-item">
+          <div class="card h-100 shadow-sm">
+            <img src="assets/img/11.svg" class="card-img-top" alt="HTML" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">
+                <a href="blogpost.html">Is HTML a Programming Language?</a>
+              </h5>
+              <p class="card-text text-muted">Developer MythBuster</p>
+              <p class="card-text"><small>10 Jan | 6 min read</small></p>
+              <a href="blogpost.html" class="btn btn-outline-primary mt-auto"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <p id="noResults" class="text-center text-muted mt-4" style="display: none;">
+        No articles found.
+      </p>
     </div>
 
     <!-- Footer -->
-    <div class="footer-dark">
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                            <li><a href="#">Marketing</a></li>
-                            <li><a href="#">Content</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3><a href="/#">DevBlog</a></h3>
-                        <p>
-                            DevBlog is a Blogpost Platform where the Users can Upload their
-                            Articles and Literatures on the Web and the maintainers of the
-                            Website can approve of them and then Publish it onto the Blog.
-                        </p>
-                    </div>
-                    <div class="col item social">
-                        <a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i
-                                class="fab fa-twitter"></i></a><a href="#"><i
-                                class="fab fa-snapchat"></i></a><a href="#"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <p class="copyright">DevBlog © <span id="copyright-year">2000</span></p>
-            </div>
-        </footer>
-    </div>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/script/index.js"></script>  
-<script>
-    var themeSheet = document.querySelector("#theme-sheet");
-    var isDarkModeEnabled = localStorage.getItem("isDarkmodeEnabled");
-    function applyTheme() {
-        if (isDarkModeEnabled === "true") {
-            themeSheet.href = "assets/style/darktheme.css";
-        } else {
-            themeSheet.href = "assets/style/style.css";
-        }
-    }
-    applyTheme();
+    <footer class="text-center mt-5 py-3 bg-light shadow-sm">
+      <p class="mb-0">&copy; 2025 DevBlog. All rights reserved.</p>
+    </footer>
 
-    function theme() {
-        if (themeSheet.getAttribute("href") == "assets/style/style.css") {
-            themeSheet.href = "assets/style/darktheme.css";
-            localStorage.setItem("isDarkmodeEnabled", true);
-        } else {
-            themeSheet.href = "assets/style/style.css";
-            localStorage.setItem("isDarkmodeEnabled", false);
-        }
-    }
-</script>
-<script>
-window.addEventListener("scroll", function() {
-  const navbar = document.querySelector(".navbar-frosted");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-</script>
-<script>
-fetch("templates/navbar.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("navbar-placeholder").innerHTML = data;
-  });
-</script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Fontawesome Script -->
-<script src="https://kit.fontawesome.com/6d2226036d.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/6d2226036d.js" crossorigin="anonymous"></script>
+    <!-- Navbar + Search JS -->
+    <script>
+      fetch("templates/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navbar = document.getElementById("navbar-placeholder");
+          navbar.innerHTML = data;
 
+          const searchInput = document.getElementById("searchInput");
+          const noResults = document.getElementById("noResults");
+
+          if (searchInput) {
+            searchInput.addEventListener("keyup", function () {
+              const filter = this.value.toLowerCase();
+              const articles = document.querySelectorAll(".article-item");
+              let found = 0;
+
+              articles.forEach((article) => {
+                const text = article.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                  article.style.display = "";
+                  found++;
+                } else {
+                  article.style.display = "none";
+                }
+              });
+
+              noResults.style.display = found === 0 ? "block" : "none";
+            });
+
+            searchInput.addEventListener("keydown", (e) => {
+              if (e.key === "Escape") {
+                searchInput.value = "";
+                document
+                  .querySelectorAll(".article-item")
+                  .forEach((a) => (a.style.display = ""));
+                noResults.style.display = "none";
+              }
+            });
+          }
+        });
+    </script>
+  </body>
 </html>
