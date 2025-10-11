@@ -578,6 +578,7 @@ a:hover {
     .blog-container p {
         margin-bottom: var(--space-sm);
     }
+  }
 
 .top-contributor-card:hover {
   transform: translateY(-8px);
@@ -600,4 +601,33 @@ a:hover {
   width: 140px;
   height: 140px;
   margin: 0 auto;
+}
+
+.read-more-btn {
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.read-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #007bff;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.read-more-btn:hover::before {
+  left: 0;
+}
+
+.read-more-btn:hover {
+  color: white !important;
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+  transform: scale(1.03);
 }
