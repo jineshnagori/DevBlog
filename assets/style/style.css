@@ -107,7 +107,8 @@ body {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-normal);
   line-height: 1.6;
-  background-color: #f8f9fa;
+  background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('../img/hero-blog.jpg') no-repeat center center/cover;
+  background-attachment: fixed; 
   color: var(--dark-color);
   padding-top: 70px; /* For fixed navbar */
   overflow-x: hidden;
@@ -146,16 +147,42 @@ a:hover {
 /* Hero Section */
 .hero-section {
     padding: 120px 0;
+    /* The background is now on the body, so we can remove it from here or keep it for structure */
+    background: transparent; 
+}
+
+.featured {
+    color: #fff; /* Ensure heading is visible on dark background */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero-blog.jpg') no-repeat center center/cover;
 }
 
 /* Article Card */
 .article-card {
+    background: rgba(255, 255, 255, 0.15) !important; 
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 12px;
     transition: transform 0.3s;
 }
 
 .article-card:hover {
     transform: translateY(-10px);
+}
+
+.article-card .card-body {
+    background: transparent;
+}
+
+.article-card .card-title a,
+.article-card .card-text {
+    color: #fff !important;
+}
+
+.article-card .card-text.text-muted,
+.article-card .card-text small.text-muted {
+    color: #dcdcdc !important;
 }
 
 /* Footer */
