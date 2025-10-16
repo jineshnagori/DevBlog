@@ -1,111 +1,128 @@
-![image](https://github.com/jineshnagori/DevBlog/blob/main/assets/img/hacktoberfest.png)
+![Hacktoberfest](https://github.com/jineshnagori/DevBlog/blob/main/assets/img/hacktoberfest.png)
 
-<h1 align="center"> Hacktoberfest 2025 </h1>
-
-<h3 align="center">
-    <a href="https://hacktoberfest.com/">
-        Link To HacktoberFest 2025
-    </a>
-</h3>
-
-## Event details :
-
-- Hacktoberfest is a **month-long** challenge. It happens every year in October.
-- Hacktoberfest is open to everyone and it marks the celebration of Open Source. It's the biggest Open Source event that encourages newbies to participate in Open Source and create their 1st meaningful PR.
-- Hacktoberfest will be hosted by Digital Ocean for the 9th year in a row in partnership with GitHub and other companies.
-- Hacktoberfest® is **open to everyone** in our global community. Whether you’re a developer, a student learning to code, an event host, or a company of any size, you can help drive the growth of open source and make positive contributions to an ever-growing community.
-- All backgrounds and skill levels are encouraged to complete the challenge.
-- Hacktoberfest is a celebration open to everyone in our global community.
-- You can sign up **anytime between September 26 and October 31**.
----
-
-## How to participate?
-
-### Step - 1:
-
-Create a GitHub account, if you don't already have one.
-
-### Step - 2:
-
-Register for Hacktoberfest: Navigate to the [Hacktoberfest registration page](https://hacktoberfest.com/) and follow the instructions. But, read the rules carefully before you do and then sign In using your GitHub credentials.
-
-### Step - 3:
-
-Find good projects worth contributing to on the GitHub page. You can type `label:hactoberfest is:issue is:open`
-
-You can add a language label of your choice to filter open issues. If you are a beginner and can’t find good issues then there’s tag `label:good first issue` which filters out issues for beginners who want to contribute.
-
-Here's something beginner-friendly for you:
-
-- https://www.firsttimersonly.com/
-- https://github.com/mungell/awesome-for-beginners
-
-### Step - 4:
-
-Submit PRs: Try and submit at least **_4 PRs_** and wait for it to be verified. Make sure to submit quality PRs.
-
----
-
-## HacktoberFest Rules :
-
-- To complete the Hacktoberfest challenge, you must **register** and make **four valid pull requests** (PRs) between October 1-31 (in any time zone).
-- Pull requests can be made in any participating GitHub or GitLab hosted repository/project. Look for the `hacktoberfest` topic to know if a repository/project is participating in Hacktoberfest.
-- Pull requests must be approved by a maintainer of the repository/project to count.
-- If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate.
-
-For your PR to count it must be:
-
-- Submitted in a public repo, AND the PR is labelled as `hacktoberfest-accepted` by a maintainer. or
-- Submitted in a repo labelled `hacktoberfest` , AND Merged, OR Approved
-
----
-
-<h3 align="center"> Whether it’s your first or fiftieth pull request, there’s always more to learn! We’ve put together a few resources that can help you create quality pull requests, keep your repositories pristine, and build on your open source knowledge. </h3>
-
----
+<h1 align="center" style="color:#FF6F61;">🎉 Hacktoberfest 2025</h1>
 
 <h3 align="center">
-    <a href="https://discord.com/invite/hacktoberfest/">
-       Join Discord Conversation
-    </a>
+    <a href="https://hacktoberfest.com/" style="color:#4A90E2;">Official Hacktoberfest 2025 Link</a>
 </h3>
 
 ---
 
-## Rules To Contribute To This Repo
+## 📌 **Project Overview**
 
-- You can write web development code in HTML, CSS, and JavaScript.
-- Follow file naming conventions for all your pull requests.
-- While adding any content it should be inside its appropiate directory.
-- If there is any problem with inaccurate solution create an issue!
+**Hacktoberfest 2025** is a **global open-source event** designed to encourage developers, students, and beginners to contribute to open-source projects.  
+This repository is a **beginner-friendly collection of projects and resources**, enabling participants to:
 
-## Steps For Contribution
+- **Learn GitHub workflow and best practices**  
+- **Create meaningful Pull Requests (PRs)**  
+- Gain experience in **web development (HTML, CSS, JavaScript)**  
+- Build confidence in contributing to open-source  
 
-    1. Fork this repo
-    2. Star this repo
-    3. Add a file inside appropriate folder
-    4. Commit the code
-    5. Make pull request
+> The goal of this project is to make the Hacktoberfest experience **educational, fun, and rewarding** for everyone.
 
 ---
 
-### FEATURES
+## 🌟 **Event Details**
 
-1. Beginner-friendly.
-2. Targeted for developers, content writers, and programming enthusiasts.
-3. Would also help participants who are not familiar with development but are eager to participate in open source.
+- Hacktoberfest is a **month-long** event held every October  
+- Hosted by **Digital Ocean** in partnership with **GitHub** and other companies  
+- Open to **everyone**: developers, students, event hosts, and companies of any size  
+- Sign-up is open **anytime between September 26 and October 31**  
+- Participants must make **four valid pull requests** to complete the challenge  
 
 ---
 
-```javascript
+## 🛠️ **Tech Stack & Tools**
 
-  _____ _                 _     __   __
- |_   _| |__   __ _ _ __ | | __ \ \ / /__  _   _
-   | | | '_ \ / _` | '_ \| |/ /  \ V / _ \| | | |
-   | | | | | | (_| | | | |   <    | | (_) | |_| |
-   |_| |_| |_|\__,_|_| |_|_|\_\   |_|\___/ \__,_|
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/VSCode-007ACC?logo=visualstudiocode&logoColor=white" />
+</p>
+
+**Other Tools:** Git, GitHub Desktop, Chrome DevTools  
+
+---
+
+## ⚙️ **Installation & Usage**
+
+Follow these steps to set up the project locally:
+
+```bash
+# 1️⃣ Fork this repository
+# 2️⃣ Clone it to your local machine
+git clone https://github.com/jineshnagori/DevBlog.git
+
+# 3️⃣ Navigate into the project folder
+cd DevBlog
+
+# 4️⃣ Open the files in your preferred editor (VSCode recommended)
+code .
+
+```
+---
+
+## 🤝 How to Contribute
+
+We welcome **all levels of contributors**!  
+
+1. **Fork the repository** 🍴  
+2. **Star this repo** ⭐  
+3. **Navigate to the appropriate folder** and add your file  
+4. **Commit your changes** with a clear and descriptive message  
+5. **Push your branch** and create a **Pull Request (PR)** 💫  
+
+### ✅ Tips for quality PRs
+
+- Submit **meaningful contributions** — avoid spam PRs  
+- Follow **file naming conventions**  
+- Place content in the **correct folder structure**  
+- Include **screenshots** for UI updates  
+- Ensure your code follows **best practices**  
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.  
+
+---
+
+## 🔥 Hacktoberfest Rules
+
+- Register at [Hacktoberfest](https://hacktoberfest.com/)  
+- Make **four valid PRs** between **October 1–31**  
+- PRs must be **approved** or labeled **hacktoberfest-accepted**  
+- PRs can be in any participating **public repo** on GitHub or GitLab  
+
+> ⚠️ **Quality over quantity!** Only meaningful contributions count.
+
+---
+
+## 📚 Resources for Beginners
+
+- [**First Timers Only**](https://www.firsttimersonly.com/) — beginner-friendly issues  
+- [**Awesome for Beginners**](https://github.com/mungell/awesome-for-beginners) — curated beginner issues  
+- [**GitHub Docs**](https://docs.github.com/en) — learn GitHub workflow  
+- [**MDN Web Docs**](https://developer.mozilla.org/) — HTML, CSS, JS references  
+
+---
+
+## 🌟 Features of This Repo
+
+- 🌱 Beginner-friendly projects  
+- 💻 Focused on web development skills  
+- ✍️ Supports content writers & developers  
+- 🚀 Encourages first-time contributors to make meaningful PRs  
+
+---
+
+<h3 align="center">
+Join the Hacktoberfest community, learn, and contribute! 🌐  
+<a href="https://discord.com/invite/hacktoberfest/" style="color:#4A90E2;">Join Discord Conversation</a>
+</h3>
 
 
 ```
-
----
