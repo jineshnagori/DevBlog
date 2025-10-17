@@ -185,6 +185,10 @@ a:hover {
 }
 
 .btn-theme {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
   color: var(--light-color);
 }
 
